@@ -37,7 +37,7 @@ public class InputManager : MonoBehaviour {
 
 	private void checkTouch() {
 		if(AppUtil.GetTouch() == AppUtil.TouchInfo.Ended) {
-			bm.fire ();
+			bm.Fire ();
 		}
 	}
 }

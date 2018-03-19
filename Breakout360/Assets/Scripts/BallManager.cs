@@ -15,21 +15,23 @@ public class BallManager : MonoBehaviour {
 		bc = GetComponent<BallController> ();
 		isFire = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	private Vector3 GetPlayerDirection() {
 		return player.transform.forward;
 	}
 
-	public void fire() {
+	public void Fire() {
 		if(!isFire) {
-			bc.fire(GetPlayerDirection());
+			bc.Fire(GetPlayerDirection());
 			isFire = true;
 			this.transform.parent = null;
+		}
+	}
+
+	void OnCollisionEnter(Collision coll) {
+		// ブロックにぶつかったら
+		if(coll.gameObject.CompareTag("Block")) {
+			coll.gameObject.GetComponent<BlockController> ().Break ();
 		}
 	}
 }

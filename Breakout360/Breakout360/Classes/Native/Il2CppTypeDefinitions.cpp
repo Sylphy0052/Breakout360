@@ -9439,7 +9439,6 @@ extern const RuntimeType GUILayer_t2783472903_1_0_0 = { (void*)1259, 0, IL2CPP_T
 extern const RuntimeType AudioSource_t3935305588_0_0_0 = { (void*)1494, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType AudioSource_t3935305588_1_0_0 = { (void*)1494, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 extern const RuntimeType AudioSource_t3935305588_0_0_1 = { (void*)1494, 1, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const RuntimeType AudioSource_t3935305588_0_0_6 = { (void*)1494, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 
 extern const RuntimeType GUITargetAttribute_t25796337_0_0_0 = { (void*)1549, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType GUITargetAttribute_t25796337_1_0_0 = { (void*)1549, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
@@ -16476,7 +16475,7 @@ extern const RuntimeType TimeSpanU5BU5D_t4291357516_0_0_0 = { (void*)&TimeSpan_t
 extern const RuntimeType TypeTagU5BU5D_t1563918664_0_0_0 = { (void*)&TypeTag_t3541821701_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
 
 extern const RuntimeType ITrackingHandlerU5BU5D_t3758023570_0_0_0 = { (void*)&ITrackingHandler_t1244553475_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
-extern const RuntimeType* const  g_Il2CppTypeTable[8377] = 
+extern const RuntimeType* const  g_Il2CppTypeTable[8376] = 
 {
 	&IEnumerator_1_t3512676632_0_0_0,
 	&RuntimeObject_0_0_0,
@@ -24752,6 +24751,7 @@ extern const RuntimeType* const  g_Il2CppTypeTable[8377] =
 	&CameraManager_t3272490737_0_0_6,
 	&StageManager_t3296066545_0_0_6,
 	&StageTextManager_t1380114822_0_0_6,
+	&AudioClip_t3680889665_0_0_6,
 	&PlayerController_t2064355688_0_0_1,
 	&BallManager_t2004465268_0_0_1,
 	&GameStatus_t3367176871_0_0_1,
@@ -24780,8 +24780,6 @@ extern const RuntimeType* const  g_Il2CppTypeTable[8377] =
 	&GameStatus_t3288486844_1_0_0,
 	&GameStatus_t3288486844_0_0_32854,
 	&SoundController_t2462365417_1_0_0,
-	&AudioClip_t3680889665_0_0_6,
-	&AudioSource_t3935305588_0_0_6,
 	&StageManager_t3296066545_0_0_0,
 	&StageManager_t3296066545_1_0_0,
 	&Text_t1901882714_0_0_6,

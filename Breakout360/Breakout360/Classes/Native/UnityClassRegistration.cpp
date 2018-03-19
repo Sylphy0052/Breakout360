@@ -313,20 +313,20 @@ RegisterBuiltinTypes();
 	RegisterClass<UI::RectTransform>();
 	//19. Mesh
 	RegisterClass<Mesh>();
-	//20. Animation
-	RegisterClass<Animation>();
-	//21. Animator
-	RegisterClass<Animator>();
-	//22. AudioClip
+	//20. AudioClip
 	RegisterClass<AudioClip>();
-	//23. SampleClip
+	//21. SampleClip
 	RegisterClass<SampleClip>();
-	//24. AudioListener
+	//22. AudioListener
 	RegisterClass<AudioListener>();
-	//25. AudioBehaviour
+	//23. AudioBehaviour
 	RegisterClass<AudioBehaviour>();
-	//26. AudioSource
+	//24. AudioSource
 	RegisterClass<AudioSource>();
+	//25. Animation
+	RegisterClass<Animation>();
+	//26. Animator
+	RegisterClass<Animator>();
 	//27. TextRendering::Font
 	RegisterClass<TextRendering::Font>();
 	//28. UI::Canvas

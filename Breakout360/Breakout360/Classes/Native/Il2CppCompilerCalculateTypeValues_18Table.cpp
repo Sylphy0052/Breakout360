@@ -63,6 +63,10 @@ struct CameraManager_t3272490737;
 struct StageManager_t3296066545;
 // StageTextManager
 struct StageTextManager_t1380114822;
+// UnityEngine.AudioClip
+struct AudioClip_t3680889665;
+// UnityEngine.AudioSource
+struct AudioSource_t3935305588;
 // PlayerController
 struct PlayerController_t2064355688;
 // BallManager
@@ -77,10 +81,6 @@ struct Rigidbody_t3916780224;
 struct Dictionary_2_t2865362463;
 // UnityEngine.Analytics.TrackableProperty
 struct TrackableProperty_t3943537984;
-// UnityEngine.AudioClip
-struct AudioClip_t3680889665;
-// UnityEngine.AudioSource
-struct AudioSource_t3935305588;
 // GyroManager
 struct GyroManager_t2156710008;
 // UnityEngine.Animation
@@ -1540,12 +1540,20 @@ public:
 	StageManager_t3296066545 * ___sm_7;
 	// StageTextManager GameManager::stm
 	StageTextManager_t1380114822 * ___stm_8;
+	// UnityEngine.AudioClip GameManager::clearSound
+	AudioClip_t3680889665 * ___clearSound_9;
+	// UnityEngine.AudioClip GameManager::overSound
+	AudioClip_t3680889665 * ___overSound_10;
+	// UnityEngine.AudioClip GameManager::touchSound
+	AudioClip_t3680889665 * ___touchSound_11;
+	// UnityEngine.AudioSource GameManager::audioSource
+	AudioSource_t3935305588 * ___audioSource_12;
 	// PlayerController GameManager::pc
-	PlayerController_t2064355688 * ___pc_9;
+	PlayerController_t2064355688 * ___pc_13;
 	// BallManager GameManager::bm
-	BallManager_t2004465268 * ___bm_10;
+	BallManager_t2004465268 * ___bm_14;
 	// GameManager/GameStatus GameManager::status
-	int32_t ___status_12;
+	int32_t ___status_16;
 
 public:
 	inline static int32_t get_offset_of_sc_2() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___sc_2)); }
@@ -1611,30 +1619,66 @@ public:
 		Il2CppCodeGenWriteBarrier((&___stm_8), value);
 	}
 
-	inline static int32_t get_offset_of_pc_9() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___pc_9)); }
-	inline PlayerController_t2064355688 * get_pc_9() const { return ___pc_9; }
-	inline PlayerController_t2064355688 ** get_address_of_pc_9() { return &___pc_9; }
-	inline void set_pc_9(PlayerController_t2064355688 * value)
+	inline static int32_t get_offset_of_clearSound_9() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___clearSound_9)); }
+	inline AudioClip_t3680889665 * get_clearSound_9() const { return ___clearSound_9; }
+	inline AudioClip_t3680889665 ** get_address_of_clearSound_9() { return &___clearSound_9; }
+	inline void set_clearSound_9(AudioClip_t3680889665 * value)
 	{
-		___pc_9 = value;
-		Il2CppCodeGenWriteBarrier((&___pc_9), value);
+		___clearSound_9 = value;
+		Il2CppCodeGenWriteBarrier((&___clearSound_9), value);
 	}
 
-	inline static int32_t get_offset_of_bm_10() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___bm_10)); }
-	inline BallManager_t2004465268 * get_bm_10() const { return ___bm_10; }
-	inline BallManager_t2004465268 ** get_address_of_bm_10() { return &___bm_10; }
-	inline void set_bm_10(BallManager_t2004465268 * value)
+	inline static int32_t get_offset_of_overSound_10() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___overSound_10)); }
+	inline AudioClip_t3680889665 * get_overSound_10() const { return ___overSound_10; }
+	inline AudioClip_t3680889665 ** get_address_of_overSound_10() { return &___overSound_10; }
+	inline void set_overSound_10(AudioClip_t3680889665 * value)
 	{
-		___bm_10 = value;
-		Il2CppCodeGenWriteBarrier((&___bm_10), value);
+		___overSound_10 = value;
+		Il2CppCodeGenWriteBarrier((&___overSound_10), value);
 	}
 
-	inline static int32_t get_offset_of_status_12() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___status_12)); }
-	inline int32_t get_status_12() const { return ___status_12; }
-	inline int32_t* get_address_of_status_12() { return &___status_12; }
-	inline void set_status_12(int32_t value)
+	inline static int32_t get_offset_of_touchSound_11() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___touchSound_11)); }
+	inline AudioClip_t3680889665 * get_touchSound_11() const { return ___touchSound_11; }
+	inline AudioClip_t3680889665 ** get_address_of_touchSound_11() { return &___touchSound_11; }
+	inline void set_touchSound_11(AudioClip_t3680889665 * value)
 	{
-		___status_12 = value;
+		___touchSound_11 = value;
+		Il2CppCodeGenWriteBarrier((&___touchSound_11), value);
+	}
+
+	inline static int32_t get_offset_of_audioSource_12() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___audioSource_12)); }
+	inline AudioSource_t3935305588 * get_audioSource_12() const { return ___audioSource_12; }
+	inline AudioSource_t3935305588 ** get_address_of_audioSource_12() { return &___audioSource_12; }
+	inline void set_audioSource_12(AudioSource_t3935305588 * value)
+	{
+		___audioSource_12 = value;
+		Il2CppCodeGenWriteBarrier((&___audioSource_12), value);
+	}
+
+	inline static int32_t get_offset_of_pc_13() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___pc_13)); }
+	inline PlayerController_t2064355688 * get_pc_13() const { return ___pc_13; }
+	inline PlayerController_t2064355688 ** get_address_of_pc_13() { return &___pc_13; }
+	inline void set_pc_13(PlayerController_t2064355688 * value)
+	{
+		___pc_13 = value;
+		Il2CppCodeGenWriteBarrier((&___pc_13), value);
+	}
+
+	inline static int32_t get_offset_of_bm_14() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___bm_14)); }
+	inline BallManager_t2004465268 * get_bm_14() const { return ___bm_14; }
+	inline BallManager_t2004465268 ** get_address_of_bm_14() { return &___bm_14; }
+	inline void set_bm_14(BallManager_t2004465268 * value)
+	{
+		___bm_14 = value;
+		Il2CppCodeGenWriteBarrier((&___bm_14), value);
+	}
+
+	inline static int32_t get_offset_of_status_16() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___status_16)); }
+	inline int32_t get_status_16() const { return ___status_16; }
+	inline int32_t* get_address_of_status_16() { return &___status_16; }
+	inline void set_status_16(int32_t value)
+	{
+		___status_16 = value;
 	}
 };
 
@@ -1642,15 +1686,15 @@ struct GameManager_t1536523654_StaticFields
 {
 public:
 	// System.Boolean GameManager::isGame
-	bool ___isGame_11;
+	bool ___isGame_15;
 
 public:
-	inline static int32_t get_offset_of_isGame_11() { return static_cast<int32_t>(offsetof(GameManager_t1536523654_StaticFields, ___isGame_11)); }
-	inline bool get_isGame_11() const { return ___isGame_11; }
-	inline bool* get_address_of_isGame_11() { return &___isGame_11; }
-	inline void set_isGame_11(bool value)
+	inline static int32_t get_offset_of_isGame_15() { return static_cast<int32_t>(offsetof(GameManager_t1536523654_StaticFields, ___isGame_15)); }
+	inline bool get_isGame_15() const { return ___isGame_15; }
+	inline bool* get_address_of_isGame_15() { return &___isGame_15; }
+	inline void set_isGame_15(bool value)
 	{
-		___isGame_11 = value;
+		___isGame_15 = value;
 	}
 };
 
@@ -1957,8 +2001,8 @@ struct  SoundController_t2462365417  : public MonoBehaviour_t3962482529
 public:
 	// UnityEngine.AudioClip SoundController::sound
 	AudioClip_t3680889665 * ___sound_2;
-	// UnityEngine.AudioSource SoundController::source
-	AudioSource_t3935305588 * ___source_3;
+	// UnityEngine.AudioClip SoundController::soundSub1
+	AudioClip_t3680889665 * ___soundSub1_3;
 
 public:
 	inline static int32_t get_offset_of_sound_2() { return static_cast<int32_t>(offsetof(SoundController_t2462365417, ___sound_2)); }
@@ -1970,13 +2014,13 @@ public:
 		Il2CppCodeGenWriteBarrier((&___sound_2), value);
 	}
 
-	inline static int32_t get_offset_of_source_3() { return static_cast<int32_t>(offsetof(SoundController_t2462365417, ___source_3)); }
-	inline AudioSource_t3935305588 * get_source_3() const { return ___source_3; }
-	inline AudioSource_t3935305588 ** get_address_of_source_3() { return &___source_3; }
-	inline void set_source_3(AudioSource_t3935305588 * value)
+	inline static int32_t get_offset_of_soundSub1_3() { return static_cast<int32_t>(offsetof(SoundController_t2462365417, ___soundSub1_3)); }
+	inline AudioClip_t3680889665 * get_soundSub1_3() const { return ___soundSub1_3; }
+	inline AudioClip_t3680889665 ** get_address_of_soundSub1_3() { return &___soundSub1_3; }
+	inline void set_soundSub1_3(AudioClip_t3680889665 * value)
 	{
-		___source_3 = value;
-		Il2CppCodeGenWriteBarrier((&___source_3), value);
+		___soundSub1_3 = value;
+		Il2CppCodeGenWriteBarrier((&___soundSub1_3), value);
 	}
 };
 
@@ -2386,7 +2430,7 @@ extern const int32_t g_FieldOffsetTable1822[6] =
 	0,
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1823 = { sizeof (GameManager_t1536523654), -1, sizeof(GameManager_t1536523654_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1823[11] = 
+extern const int32_t g_FieldOffsetTable1823[15] = 
 {
 	GameManager_t1536523654::get_offset_of_sc_2(),
 	GameManager_t1536523654::get_offset_of_im_3(),
@@ -2395,10 +2439,14 @@ extern const int32_t g_FieldOffsetTable1823[11] =
 	GameManager_t1536523654::get_offset_of_cm_6(),
 	GameManager_t1536523654::get_offset_of_sm_7(),
 	GameManager_t1536523654::get_offset_of_stm_8(),
-	GameManager_t1536523654::get_offset_of_pc_9(),
-	GameManager_t1536523654::get_offset_of_bm_10(),
-	GameManager_t1536523654_StaticFields::get_offset_of_isGame_11(),
-	GameManager_t1536523654::get_offset_of_status_12(),
+	GameManager_t1536523654::get_offset_of_clearSound_9(),
+	GameManager_t1536523654::get_offset_of_overSound_10(),
+	GameManager_t1536523654::get_offset_of_touchSound_11(),
+	GameManager_t1536523654::get_offset_of_audioSource_12(),
+	GameManager_t1536523654::get_offset_of_pc_13(),
+	GameManager_t1536523654::get_offset_of_bm_14(),
+	GameManager_t1536523654_StaticFields::get_offset_of_isGame_15(),
+	GameManager_t1536523654::get_offset_of_status_16(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1824 = { sizeof (GameStatus_t3367176871)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
 extern const int32_t g_FieldOffsetTable1824[5] = 
@@ -2457,7 +2505,7 @@ extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1834 = { sizeof (Soun
 extern const int32_t g_FieldOffsetTable1834[2] = 
 {
 	SoundController_t2462365417::get_offset_of_sound_2(),
-	SoundController_t2462365417::get_offset_of_source_3(),
+	SoundController_t2462365417::get_offset_of_soundSub1_3(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1835 = { sizeof (StageManager_t3296066545), -1, sizeof(StageManager_t3296066545_StaticFields), 0 };
 extern const int32_t g_FieldOffsetTable1835[5] = 

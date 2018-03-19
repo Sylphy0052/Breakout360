@@ -507,6 +507,9 @@ MonoBehaviour:
   cm: {fileID: 0}
   sm: {fileID: 0}
   stm: {fileID: 0}
+  clearSound: {fileID: 0}
+  overSound: {fileID: 0}
+  touchSound: {fileID: 8300000, guid: d6ba0e5e52e944919b92f61f6e657e9d, type: 3}
 --- !u!1 &1540767556
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +687,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fc154bc714e1148baa4b56649014c622, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a29f571561b664a9e808e15fbfd57917, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1

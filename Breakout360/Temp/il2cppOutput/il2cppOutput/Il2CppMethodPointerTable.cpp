@@ -10521,6 +10521,7 @@ extern "C" void CameraManager_UpCamera_m633613341 ();
 extern "C" void CameraManager_GetStatus_m3786155143 ();
 extern "C" void CameraManager_SetStatus_m2778707669 ();
 extern "C" void GameManager__ctor_m180891015 ();
+extern "C" void GameManager_Start_m2734446095 ();
 extern "C" void GameManager_Update_m1981238775 ();
 extern "C" void GameManager_ActionByScene_m107967549 ();
 extern "C" void GameManager__cctor_m4243923930 ();
@@ -10560,6 +10561,7 @@ extern "C" void SceneController_LoadGame_m2594758407 ();
 extern "C" void SceneController__cctor_m2985119817 ();
 extern "C" void SoundController__ctor_m919190390 ();
 extern "C" void SoundController_PlaySound_m4128028087 ();
+extern "C" void SoundController_PlaySound2_m1037078967 ();
 extern "C" void StageManager__ctor_m3331623394 ();
 extern "C" void StageManager_Start_m2166152772 ();
 extern "C" void StageManager_Update_m448967036 ();
@@ -10575,7 +10577,7 @@ extern "C" void TitleCameraController__ctor_m4267375646 ();
 extern "C" void TitleCameraController_Start_m473949826 ();
 extern "C" void WallManager__ctor_m2705997716 ();
 extern "C" void WallManager_OnCollisionEnter_m2944439721 ();
-extern const Il2CppMethodPointer g_MethodPointers[10557] = 
+extern const Il2CppMethodPointer g_MethodPointers[10559] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -21080,6 +21082,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10557] =
 	CameraManager_GetStatus_m3786155143,
 	CameraManager_SetStatus_m2778707669,
 	GameManager__ctor_m180891015,
+	GameManager_Start_m2734446095,
 	GameManager_Update_m1981238775,
 	GameManager_ActionByScene_m107967549,
 	GameManager__cctor_m4243923930,
@@ -21119,6 +21122,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10557] =
 	SceneController__cctor_m2985119817,
 	SoundController__ctor_m919190390,
 	SoundController_PlaySound_m4128028087,
+	SoundController_PlaySound2_m1037078967,
 	StageManager__ctor_m3331623394,
 	StageManager_Start_m2166152772,
 	StageManager_Update_m448967036,

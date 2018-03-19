@@ -70,6 +70,8 @@ struct GameManager_t1536523654;
 struct SceneController_t2849316448;
 // InputManager
 struct InputManager_t2926777569;
+// UnityEngine.AudioClip
+struct AudioClip_t3680889665;
 // StageManager
 struct StageManager_t3296066545;
 // StageTextManager
@@ -84,8 +86,6 @@ struct Animation_t3648466861;
 struct ObjectCreator_t3827148781;
 // PlayerCamera
 struct PlayerCamera_t1622178205;
-// UnityEngine.AudioClip
-struct AudioClip_t3680889665;
 // UnityEngine.GameObject[]
 struct GameObjectU5BU5D_t3328599146;
 // TitleCameraController
@@ -159,6 +159,8 @@ extern const RuntimeMethod* GameObject_GetComponent_TisSoundController_t24623654
 extern const uint32_t BlockController_Break_m2204360455_MetadataUsageId;
 extern const RuntimeMethod* GameObject_GetComponent_TisMainCameraManager_t346017319_m3414863324_RuntimeMethod_var;
 extern const uint32_t CameraManager_Start_m229022957_MetadataUsageId;
+extern const RuntimeMethod* Component_GetComponent_TisAudioSource_t3935305588_m1977431131_RuntimeMethod_var;
+extern const uint32_t GameManager_Start_m2734446095_MetadataUsageId;
 extern RuntimeClass* GameManager_t1536523654_il2cpp_TypeInfo_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisBallManager_t2004465268_m4041910020_RuntimeMethod_var;
 extern const uint32_t GameManager_Update_m1981238775_MetadataUsageId;
@@ -1029,6 +1031,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // VOID_T1185182177_H
+#ifndef INPUTKEY_T3531497963_H
+#define INPUTKEY_T3531497963_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// InputManager/InputKey
+struct  InputKey_t3531497963 
+{
+public:
+	// System.Int32 InputManager/InputKey::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(InputKey_t3531497963, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // INPUTKEY_T3531497963_H
 #ifndef CAMERASTATUS_T1114841525_H
 #define CAMERASTATUS_T1114841525_H
 #ifdef __clang__
@@ -1087,35 +1118,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // KEYCODE_T2599294277_H
-#ifndef INPUTKEY_T3531497963_H
-#define INPUTKEY_T3531497963_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// InputManager/InputKey
-struct  InputKey_t3531497963 
-{
-public:
-	// System.Int32 InputManager/InputKey::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(InputKey_t3531497963, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // INPUTKEY_T3531497963_H
 #ifndef GAMESTATUS_T3367176871_H
 #define GAMESTATUS_T3367176871_H
 #ifdef __clang__
@@ -1203,6 +1205,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TOUCHINFO_T3414740155_H
+#ifndef GAMESTATUS_T3288486844_H
+#define GAMESTATUS_T3288486844_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// SceneController/GameStatus
+struct  GameStatus_t3288486844 
+{
+public:
+	// System.Int32 SceneController/GameStatus::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(GameStatus_t3288486844, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // GAMESTATUS_T3288486844_H
 #ifndef TOUCHTYPE_T2034578258_H
 #define TOUCHTYPE_T2034578258_H
 #ifdef __clang__
@@ -1322,35 +1353,6 @@ struct Collision_t4262080450_marshaled_com
 	ContactPoint_t3758755253 * ___m_Contacts_4;
 };
 #endif // COLLISION_T4262080450_H
-#ifndef GAMESTATUS_T3288486844_H
-#define GAMESTATUS_T3288486844_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// SceneController/GameStatus
-struct  GameStatus_t3288486844 
-{
-public:
-	// System.Int32 SceneController/GameStatus::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(GameStatus_t3288486844, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GAMESTATUS_T3288486844_H
 #ifndef OBJECT_T631007953_H
 #define OBJECT_T631007953_H
 #ifdef __clang__
@@ -1426,47 +1428,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // GAMEOBJECT_T1113636619_H
-#ifndef AUDIOCLIP_T3680889665_H
-#define AUDIOCLIP_T3680889665_H
+#ifndef COMPONENT_T1923634451_H
+#define COMPONENT_T1923634451_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.AudioClip
-struct  AudioClip_t3680889665  : public Object_t631007953
+// UnityEngine.Component
+struct  Component_t1923634451  : public Object_t631007953
 {
 public:
-	// UnityEngine.AudioClip/PCMReaderCallback UnityEngine.AudioClip::m_PCMReaderCallback
-	PCMReaderCallback_t1677636661 * ___m_PCMReaderCallback_2;
-	// UnityEngine.AudioClip/PCMSetPositionCallback UnityEngine.AudioClip::m_PCMSetPositionCallback
-	PCMSetPositionCallback_t1059417452 * ___m_PCMSetPositionCallback_3;
 
 public:
-	inline static int32_t get_offset_of_m_PCMReaderCallback_2() { return static_cast<int32_t>(offsetof(AudioClip_t3680889665, ___m_PCMReaderCallback_2)); }
-	inline PCMReaderCallback_t1677636661 * get_m_PCMReaderCallback_2() const { return ___m_PCMReaderCallback_2; }
-	inline PCMReaderCallback_t1677636661 ** get_address_of_m_PCMReaderCallback_2() { return &___m_PCMReaderCallback_2; }
-	inline void set_m_PCMReaderCallback_2(PCMReaderCallback_t1677636661 * value)
-	{
-		___m_PCMReaderCallback_2 = value;
-		Il2CppCodeGenWriteBarrier((&___m_PCMReaderCallback_2), value);
-	}
-
-	inline static int32_t get_offset_of_m_PCMSetPositionCallback_3() { return static_cast<int32_t>(offsetof(AudioClip_t3680889665, ___m_PCMSetPositionCallback_3)); }
-	inline PCMSetPositionCallback_t1059417452 * get_m_PCMSetPositionCallback_3() const { return ___m_PCMSetPositionCallback_3; }
-	inline PCMSetPositionCallback_t1059417452 ** get_address_of_m_PCMSetPositionCallback_3() { return &___m_PCMSetPositionCallback_3; }
-	inline void set_m_PCMSetPositionCallback_3(PCMSetPositionCallback_t1059417452 * value)
-	{
-		___m_PCMSetPositionCallback_3 = value;
-		Il2CppCodeGenWriteBarrier((&___m_PCMSetPositionCallback_3), value);
-	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // AUDIOCLIP_T3680889665_H
+#endif // COMPONENT_T1923634451_H
 #ifndef TOUCH_T1921856868_H
 #define TOUCH_T1921856868_H
 #ifdef __clang__
@@ -1626,26 +1607,47 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TOUCH_T1921856868_H
-#ifndef COMPONENT_T1923634451_H
-#define COMPONENT_T1923634451_H
+#ifndef AUDIOCLIP_T3680889665_H
+#define AUDIOCLIP_T3680889665_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Component
-struct  Component_t1923634451  : public Object_t631007953
+// UnityEngine.AudioClip
+struct  AudioClip_t3680889665  : public Object_t631007953
 {
 public:
+	// UnityEngine.AudioClip/PCMReaderCallback UnityEngine.AudioClip::m_PCMReaderCallback
+	PCMReaderCallback_t1677636661 * ___m_PCMReaderCallback_2;
+	// UnityEngine.AudioClip/PCMSetPositionCallback UnityEngine.AudioClip::m_PCMSetPositionCallback
+	PCMSetPositionCallback_t1059417452 * ___m_PCMSetPositionCallback_3;
 
 public:
+	inline static int32_t get_offset_of_m_PCMReaderCallback_2() { return static_cast<int32_t>(offsetof(AudioClip_t3680889665, ___m_PCMReaderCallback_2)); }
+	inline PCMReaderCallback_t1677636661 * get_m_PCMReaderCallback_2() const { return ___m_PCMReaderCallback_2; }
+	inline PCMReaderCallback_t1677636661 ** get_address_of_m_PCMReaderCallback_2() { return &___m_PCMReaderCallback_2; }
+	inline void set_m_PCMReaderCallback_2(PCMReaderCallback_t1677636661 * value)
+	{
+		___m_PCMReaderCallback_2 = value;
+		Il2CppCodeGenWriteBarrier((&___m_PCMReaderCallback_2), value);
+	}
+
+	inline static int32_t get_offset_of_m_PCMSetPositionCallback_3() { return static_cast<int32_t>(offsetof(AudioClip_t3680889665, ___m_PCMSetPositionCallback_3)); }
+	inline PCMSetPositionCallback_t1059417452 * get_m_PCMSetPositionCallback_3() const { return ___m_PCMSetPositionCallback_3; }
+	inline PCMSetPositionCallback_t1059417452 ** get_address_of_m_PCMSetPositionCallback_3() { return &___m_PCMSetPositionCallback_3; }
+	inline void set_m_PCMSetPositionCallback_3(PCMSetPositionCallback_t1059417452 * value)
+	{
+		___m_PCMSetPositionCallback_3 = value;
+		Il2CppCodeGenWriteBarrier((&___m_PCMSetPositionCallback_3), value);
+	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // COMPONENT_T1923634451_H
+#endif // AUDIOCLIP_T3680889665_H
 #ifndef BEHAVIOUR_T1437897464_H
 #define BEHAVIOUR_T1437897464_H
 #ifdef __clang__
@@ -1706,6 +1708,46 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TRANSFORM_T3600365921_H
+#ifndef ANIMATION_T3648466861_H
+#define ANIMATION_T3648466861_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Animation
+struct  Animation_t3648466861  : public Behaviour_t1437897464
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ANIMATION_T3648466861_H
+#ifndef MONOBEHAVIOUR_T3962482529_H
+#define MONOBEHAVIOUR_T3962482529_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.MonoBehaviour
+struct  MonoBehaviour_t3962482529  : public Behaviour_t1437897464
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // MONOBEHAVIOUR_T3962482529_H
 #ifndef AUDIOSOURCE_T3935305588_H
 #define AUDIOSOURCE_T3935305588_H
 #ifdef __clang__
@@ -1747,66 +1789,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AUDIOSOURCE_T3935305588_H
-#ifndef MONOBEHAVIOUR_T3962482529_H
-#define MONOBEHAVIOUR_T3962482529_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.MonoBehaviour
-struct  MonoBehaviour_t3962482529  : public Behaviour_t1437897464
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // MONOBEHAVIOUR_T3962482529_H
-#ifndef ANIMATION_T3648466861_H
-#define ANIMATION_T3648466861_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Animation
-struct  Animation_t3648466861  : public Behaviour_t1437897464
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ANIMATION_T3648466861_H
-#ifndef WALLMANAGER_T2004477583_H
-#define WALLMANAGER_T2004477583_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// WallManager
-struct  WallManager_t2004477583  : public MonoBehaviour_t3962482529
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // WALLMANAGER_T2004477583_H
 #ifndef TITLECAMERACONTROLLER_T331798842_H
 #define TITLECAMERACONTROLLER_T331798842_H
 #ifdef __clang__
@@ -1827,6 +1809,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TITLECAMERACONTROLLER_T331798842_H
+#ifndef WALLMANAGER_T2004477583_H
+#define WALLMANAGER_T2004477583_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// WallManager
+struct  WallManager_t2004477583  : public MonoBehaviour_t3962482529
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // WALLMANAGER_T2004477583_H
 #ifndef BARMANAGER_T4217880126_H
 #define BARMANAGER_T4217880126_H
 #ifdef __clang__
@@ -1998,26 +2000,42 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // UIBEHAVIOUR_T3495933518_H
-#ifndef INPUTMANAGER_T2926777569_H
-#define INPUTMANAGER_T2926777569_H
+#ifndef SCENECONTROLLER_T2849316448_H
+#define SCENECONTROLLER_T2849316448_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// InputManager
-struct  InputManager_t2926777569  : public MonoBehaviour_t3962482529
+// SceneController
+struct  SceneController_t2849316448  : public MonoBehaviour_t3962482529
 {
 public:
 
 public:
 };
 
+struct SceneController_t2849316448_StaticFields
+{
+public:
+	// SceneController/GameStatus SceneController::currentStatus
+	int32_t ___currentStatus_2;
+
+public:
+	inline static int32_t get_offset_of_currentStatus_2() { return static_cast<int32_t>(offsetof(SceneController_t2849316448_StaticFields, ___currentStatus_2)); }
+	inline int32_t get_currentStatus_2() const { return ___currentStatus_2; }
+	inline int32_t* get_address_of_currentStatus_2() { return &___currentStatus_2; }
+	inline void set_currentStatus_2(int32_t value)
+	{
+		___currentStatus_2 = value;
+	}
+};
+
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // INPUTMANAGER_T2926777569_H
+#endif // SCENECONTROLLER_T2849316448_H
 #ifndef GAMEMANAGER_T1536523654_H
 #define GAMEMANAGER_T1536523654_H
 #ifdef __clang__
@@ -2044,12 +2062,20 @@ public:
 	StageManager_t3296066545 * ___sm_7;
 	// StageTextManager GameManager::stm
 	StageTextManager_t1380114822 * ___stm_8;
+	// UnityEngine.AudioClip GameManager::clearSound
+	AudioClip_t3680889665 * ___clearSound_9;
+	// UnityEngine.AudioClip GameManager::overSound
+	AudioClip_t3680889665 * ___overSound_10;
+	// UnityEngine.AudioClip GameManager::touchSound
+	AudioClip_t3680889665 * ___touchSound_11;
+	// UnityEngine.AudioSource GameManager::audioSource
+	AudioSource_t3935305588 * ___audioSource_12;
 	// PlayerController GameManager::pc
-	PlayerController_t2064355688 * ___pc_9;
+	PlayerController_t2064355688 * ___pc_13;
 	// BallManager GameManager::bm
-	BallManager_t2004465268 * ___bm_10;
+	BallManager_t2004465268 * ___bm_14;
 	// GameManager/GameStatus GameManager::status
-	int32_t ___status_12;
+	int32_t ___status_16;
 
 public:
 	inline static int32_t get_offset_of_sc_2() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___sc_2)); }
@@ -2115,30 +2141,66 @@ public:
 		Il2CppCodeGenWriteBarrier((&___stm_8), value);
 	}
 
-	inline static int32_t get_offset_of_pc_9() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___pc_9)); }
-	inline PlayerController_t2064355688 * get_pc_9() const { return ___pc_9; }
-	inline PlayerController_t2064355688 ** get_address_of_pc_9() { return &___pc_9; }
-	inline void set_pc_9(PlayerController_t2064355688 * value)
+	inline static int32_t get_offset_of_clearSound_9() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___clearSound_9)); }
+	inline AudioClip_t3680889665 * get_clearSound_9() const { return ___clearSound_9; }
+	inline AudioClip_t3680889665 ** get_address_of_clearSound_9() { return &___clearSound_9; }
+	inline void set_clearSound_9(AudioClip_t3680889665 * value)
 	{
-		___pc_9 = value;
-		Il2CppCodeGenWriteBarrier((&___pc_9), value);
+		___clearSound_9 = value;
+		Il2CppCodeGenWriteBarrier((&___clearSound_9), value);
 	}
 
-	inline static int32_t get_offset_of_bm_10() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___bm_10)); }
-	inline BallManager_t2004465268 * get_bm_10() const { return ___bm_10; }
-	inline BallManager_t2004465268 ** get_address_of_bm_10() { return &___bm_10; }
-	inline void set_bm_10(BallManager_t2004465268 * value)
+	inline static int32_t get_offset_of_overSound_10() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___overSound_10)); }
+	inline AudioClip_t3680889665 * get_overSound_10() const { return ___overSound_10; }
+	inline AudioClip_t3680889665 ** get_address_of_overSound_10() { return &___overSound_10; }
+	inline void set_overSound_10(AudioClip_t3680889665 * value)
 	{
-		___bm_10 = value;
-		Il2CppCodeGenWriteBarrier((&___bm_10), value);
+		___overSound_10 = value;
+		Il2CppCodeGenWriteBarrier((&___overSound_10), value);
 	}
 
-	inline static int32_t get_offset_of_status_12() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___status_12)); }
-	inline int32_t get_status_12() const { return ___status_12; }
-	inline int32_t* get_address_of_status_12() { return &___status_12; }
-	inline void set_status_12(int32_t value)
+	inline static int32_t get_offset_of_touchSound_11() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___touchSound_11)); }
+	inline AudioClip_t3680889665 * get_touchSound_11() const { return ___touchSound_11; }
+	inline AudioClip_t3680889665 ** get_address_of_touchSound_11() { return &___touchSound_11; }
+	inline void set_touchSound_11(AudioClip_t3680889665 * value)
 	{
-		___status_12 = value;
+		___touchSound_11 = value;
+		Il2CppCodeGenWriteBarrier((&___touchSound_11), value);
+	}
+
+	inline static int32_t get_offset_of_audioSource_12() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___audioSource_12)); }
+	inline AudioSource_t3935305588 * get_audioSource_12() const { return ___audioSource_12; }
+	inline AudioSource_t3935305588 ** get_address_of_audioSource_12() { return &___audioSource_12; }
+	inline void set_audioSource_12(AudioSource_t3935305588 * value)
+	{
+		___audioSource_12 = value;
+		Il2CppCodeGenWriteBarrier((&___audioSource_12), value);
+	}
+
+	inline static int32_t get_offset_of_pc_13() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___pc_13)); }
+	inline PlayerController_t2064355688 * get_pc_13() const { return ___pc_13; }
+	inline PlayerController_t2064355688 ** get_address_of_pc_13() { return &___pc_13; }
+	inline void set_pc_13(PlayerController_t2064355688 * value)
+	{
+		___pc_13 = value;
+		Il2CppCodeGenWriteBarrier((&___pc_13), value);
+	}
+
+	inline static int32_t get_offset_of_bm_14() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___bm_14)); }
+	inline BallManager_t2004465268 * get_bm_14() const { return ___bm_14; }
+	inline BallManager_t2004465268 ** get_address_of_bm_14() { return &___bm_14; }
+	inline void set_bm_14(BallManager_t2004465268 * value)
+	{
+		___bm_14 = value;
+		Il2CppCodeGenWriteBarrier((&___bm_14), value);
+	}
+
+	inline static int32_t get_offset_of_status_16() { return static_cast<int32_t>(offsetof(GameManager_t1536523654, ___status_16)); }
+	inline int32_t get_status_16() const { return ___status_16; }
+	inline int32_t* get_address_of_status_16() { return &___status_16; }
+	inline void set_status_16(int32_t value)
+	{
+		___status_16 = value;
 	}
 };
 
@@ -2146,15 +2208,15 @@ struct GameManager_t1536523654_StaticFields
 {
 public:
 	// System.Boolean GameManager::isGame
-	bool ___isGame_11;
+	bool ___isGame_15;
 
 public:
-	inline static int32_t get_offset_of_isGame_11() { return static_cast<int32_t>(offsetof(GameManager_t1536523654_StaticFields, ___isGame_11)); }
-	inline bool get_isGame_11() const { return ___isGame_11; }
-	inline bool* get_address_of_isGame_11() { return &___isGame_11; }
-	inline void set_isGame_11(bool value)
+	inline static int32_t get_offset_of_isGame_15() { return static_cast<int32_t>(offsetof(GameManager_t1536523654_StaticFields, ___isGame_15)); }
+	inline bool get_isGame_15() const { return ___isGame_15; }
+	inline bool* get_address_of_isGame_15() { return &___isGame_15; }
+	inline void set_isGame_15(bool value)
 	{
-		___isGame_11 = value;
+		___isGame_15 = value;
 	}
 };
 
@@ -2162,42 +2224,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // GAMEMANAGER_T1536523654_H
-#ifndef SCENECONTROLLER_T2849316448_H
-#define SCENECONTROLLER_T2849316448_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// SceneController
-struct  SceneController_t2849316448  : public MonoBehaviour_t3962482529
-{
-public:
-
-public:
-};
-
-struct SceneController_t2849316448_StaticFields
-{
-public:
-	// SceneController/GameStatus SceneController::currentStatus
-	int32_t ___currentStatus_2;
-
-public:
-	inline static int32_t get_offset_of_currentStatus_2() { return static_cast<int32_t>(offsetof(SceneController_t2849316448_StaticFields, ___currentStatus_2)); }
-	inline int32_t get_currentStatus_2() const { return ___currentStatus_2; }
-	inline int32_t* get_address_of_currentStatus_2() { return &___currentStatus_2; }
-	inline void set_currentStatus_2(int32_t value)
-	{
-		___currentStatus_2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SCENECONTROLLER_T2849316448_H
 #ifndef MAINCAMERAMANAGER_T346017319_H
 #define MAINCAMERAMANAGER_T346017319_H
 #ifdef __clang__
@@ -2228,6 +2254,108 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // MAINCAMERAMANAGER_T346017319_H
+#ifndef CAMERAMANAGER_T3272490737_H
+#define CAMERAMANAGER_T3272490737_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// CameraManager
+struct  CameraManager_t3272490737  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.GameObject CameraManager::mainCamera
+	GameObject_t1113636619 * ___mainCamera_2;
+	// UnityEngine.GameObject CameraManager::playerCamera
+	GameObject_t1113636619 * ___playerCamera_3;
+	// CameraManager/CameraStatus CameraManager::status
+	int32_t ___status_4;
+	// MainCameraManager CameraManager::mcm
+	MainCameraManager_t346017319 * ___mcm_5;
+	// System.Boolean CameraManager::isDown
+	bool ___isDown_6;
+	// System.Boolean CameraManager::isUp
+	bool ___isUp_7;
+
+public:
+	inline static int32_t get_offset_of_mainCamera_2() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___mainCamera_2)); }
+	inline GameObject_t1113636619 * get_mainCamera_2() const { return ___mainCamera_2; }
+	inline GameObject_t1113636619 ** get_address_of_mainCamera_2() { return &___mainCamera_2; }
+	inline void set_mainCamera_2(GameObject_t1113636619 * value)
+	{
+		___mainCamera_2 = value;
+		Il2CppCodeGenWriteBarrier((&___mainCamera_2), value);
+	}
+
+	inline static int32_t get_offset_of_playerCamera_3() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___playerCamera_3)); }
+	inline GameObject_t1113636619 * get_playerCamera_3() const { return ___playerCamera_3; }
+	inline GameObject_t1113636619 ** get_address_of_playerCamera_3() { return &___playerCamera_3; }
+	inline void set_playerCamera_3(GameObject_t1113636619 * value)
+	{
+		___playerCamera_3 = value;
+		Il2CppCodeGenWriteBarrier((&___playerCamera_3), value);
+	}
+
+	inline static int32_t get_offset_of_status_4() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___status_4)); }
+	inline int32_t get_status_4() const { return ___status_4; }
+	inline int32_t* get_address_of_status_4() { return &___status_4; }
+	inline void set_status_4(int32_t value)
+	{
+		___status_4 = value;
+	}
+
+	inline static int32_t get_offset_of_mcm_5() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___mcm_5)); }
+	inline MainCameraManager_t346017319 * get_mcm_5() const { return ___mcm_5; }
+	inline MainCameraManager_t346017319 ** get_address_of_mcm_5() { return &___mcm_5; }
+	inline void set_mcm_5(MainCameraManager_t346017319 * value)
+	{
+		___mcm_5 = value;
+		Il2CppCodeGenWriteBarrier((&___mcm_5), value);
+	}
+
+	inline static int32_t get_offset_of_isDown_6() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___isDown_6)); }
+	inline bool get_isDown_6() const { return ___isDown_6; }
+	inline bool* get_address_of_isDown_6() { return &___isDown_6; }
+	inline void set_isDown_6(bool value)
+	{
+		___isDown_6 = value;
+	}
+
+	inline static int32_t get_offset_of_isUp_7() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___isUp_7)); }
+	inline bool get_isUp_7() const { return ___isUp_7; }
+	inline bool* get_address_of_isUp_7() { return &___isUp_7; }
+	inline void set_isUp_7(bool value)
+	{
+		___isUp_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // CAMERAMANAGER_T3272490737_H
+#ifndef INPUTMANAGER_T2926777569_H
+#define INPUTMANAGER_T2926777569_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// InputManager
+struct  InputManager_t2926777569  : public MonoBehaviour_t3962482529
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // INPUTMANAGER_T2926777569_H
 #ifndef STAGEMANAGER_T3296066545_H
 #define STAGEMANAGER_T3296066545_H
 #ifdef __clang__
@@ -2358,67 +2486,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // STAGETEXTMANAGER_T1380114822_H
-#ifndef GYROMANAGER_T2156710008_H
-#define GYROMANAGER_T2156710008_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// GyroManager
-struct  GyroManager_t2156710008  : public MonoBehaviour_t3962482529
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GYROMANAGER_T2156710008_H
-#ifndef SOUNDCONTROLLER_T2462365417_H
-#define SOUNDCONTROLLER_T2462365417_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// SoundController
-struct  SoundController_t2462365417  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.AudioClip SoundController::sound
-	AudioClip_t3680889665 * ___sound_2;
-	// UnityEngine.AudioSource SoundController::source
-	AudioSource_t3935305588 * ___source_3;
-
-public:
-	inline static int32_t get_offset_of_sound_2() { return static_cast<int32_t>(offsetof(SoundController_t2462365417, ___sound_2)); }
-	inline AudioClip_t3680889665 * get_sound_2() const { return ___sound_2; }
-	inline AudioClip_t3680889665 ** get_address_of_sound_2() { return &___sound_2; }
-	inline void set_sound_2(AudioClip_t3680889665 * value)
-	{
-		___sound_2 = value;
-		Il2CppCodeGenWriteBarrier((&___sound_2), value);
-	}
-
-	inline static int32_t get_offset_of_source_3() { return static_cast<int32_t>(offsetof(SoundController_t2462365417, ___source_3)); }
-	inline AudioSource_t3935305588 * get_source_3() const { return ___source_3; }
-	inline AudioSource_t3935305588 ** get_address_of_source_3() { return &___source_3; }
-	inline void set_source_3(AudioSource_t3935305588 * value)
-	{
-		___source_3 = value;
-		Il2CppCodeGenWriteBarrier((&___source_3), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SOUNDCONTROLLER_T2462365417_H
 #ifndef PLAYERCAMERA_T1622178205_H
 #define PLAYERCAMERA_T1622178205_H
 #ifdef __clang__
@@ -2479,88 +2546,47 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // OBJECTCREATOR_T3827148781_H
-#ifndef CAMERAMANAGER_T3272490737_H
-#define CAMERAMANAGER_T3272490737_H
+#ifndef SOUNDCONTROLLER_T2462365417_H
+#define SOUNDCONTROLLER_T2462365417_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// CameraManager
-struct  CameraManager_t3272490737  : public MonoBehaviour_t3962482529
+// SoundController
+struct  SoundController_t2462365417  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.GameObject CameraManager::mainCamera
-	GameObject_t1113636619 * ___mainCamera_2;
-	// UnityEngine.GameObject CameraManager::playerCamera
-	GameObject_t1113636619 * ___playerCamera_3;
-	// CameraManager/CameraStatus CameraManager::status
-	int32_t ___status_4;
-	// MainCameraManager CameraManager::mcm
-	MainCameraManager_t346017319 * ___mcm_5;
-	// System.Boolean CameraManager::isDown
-	bool ___isDown_6;
-	// System.Boolean CameraManager::isUp
-	bool ___isUp_7;
+	// UnityEngine.AudioClip SoundController::sound
+	AudioClip_t3680889665 * ___sound_2;
+	// UnityEngine.AudioClip SoundController::soundSub1
+	AudioClip_t3680889665 * ___soundSub1_3;
 
 public:
-	inline static int32_t get_offset_of_mainCamera_2() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___mainCamera_2)); }
-	inline GameObject_t1113636619 * get_mainCamera_2() const { return ___mainCamera_2; }
-	inline GameObject_t1113636619 ** get_address_of_mainCamera_2() { return &___mainCamera_2; }
-	inline void set_mainCamera_2(GameObject_t1113636619 * value)
+	inline static int32_t get_offset_of_sound_2() { return static_cast<int32_t>(offsetof(SoundController_t2462365417, ___sound_2)); }
+	inline AudioClip_t3680889665 * get_sound_2() const { return ___sound_2; }
+	inline AudioClip_t3680889665 ** get_address_of_sound_2() { return &___sound_2; }
+	inline void set_sound_2(AudioClip_t3680889665 * value)
 	{
-		___mainCamera_2 = value;
-		Il2CppCodeGenWriteBarrier((&___mainCamera_2), value);
+		___sound_2 = value;
+		Il2CppCodeGenWriteBarrier((&___sound_2), value);
 	}
 
-	inline static int32_t get_offset_of_playerCamera_3() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___playerCamera_3)); }
-	inline GameObject_t1113636619 * get_playerCamera_3() const { return ___playerCamera_3; }
-	inline GameObject_t1113636619 ** get_address_of_playerCamera_3() { return &___playerCamera_3; }
-	inline void set_playerCamera_3(GameObject_t1113636619 * value)
+	inline static int32_t get_offset_of_soundSub1_3() { return static_cast<int32_t>(offsetof(SoundController_t2462365417, ___soundSub1_3)); }
+	inline AudioClip_t3680889665 * get_soundSub1_3() const { return ___soundSub1_3; }
+	inline AudioClip_t3680889665 ** get_address_of_soundSub1_3() { return &___soundSub1_3; }
+	inline void set_soundSub1_3(AudioClip_t3680889665 * value)
 	{
-		___playerCamera_3 = value;
-		Il2CppCodeGenWriteBarrier((&___playerCamera_3), value);
-	}
-
-	inline static int32_t get_offset_of_status_4() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___status_4)); }
-	inline int32_t get_status_4() const { return ___status_4; }
-	inline int32_t* get_address_of_status_4() { return &___status_4; }
-	inline void set_status_4(int32_t value)
-	{
-		___status_4 = value;
-	}
-
-	inline static int32_t get_offset_of_mcm_5() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___mcm_5)); }
-	inline MainCameraManager_t346017319 * get_mcm_5() const { return ___mcm_5; }
-	inline MainCameraManager_t346017319 ** get_address_of_mcm_5() { return &___mcm_5; }
-	inline void set_mcm_5(MainCameraManager_t346017319 * value)
-	{
-		___mcm_5 = value;
-		Il2CppCodeGenWriteBarrier((&___mcm_5), value);
-	}
-
-	inline static int32_t get_offset_of_isDown_6() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___isDown_6)); }
-	inline bool get_isDown_6() const { return ___isDown_6; }
-	inline bool* get_address_of_isDown_6() { return &___isDown_6; }
-	inline void set_isDown_6(bool value)
-	{
-		___isDown_6 = value;
-	}
-
-	inline static int32_t get_offset_of_isUp_7() { return static_cast<int32_t>(offsetof(CameraManager_t3272490737, ___isUp_7)); }
-	inline bool get_isUp_7() const { return ___isUp_7; }
-	inline bool* get_address_of_isUp_7() { return &___isUp_7; }
-	inline void set_isUp_7(bool value)
-	{
-		___isUp_7 = value;
+		___soundSub1_3 = value;
+		Il2CppCodeGenWriteBarrier((&___soundSub1_3), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // CAMERAMANAGER_T3272490737_H
+#endif // SOUNDCONTROLLER_T2462365417_H
 #ifndef BALLCONTROLLER_T2992829471_H
 #define BALLCONTROLLER_T2992829471_H
 #ifdef __clang__
@@ -2601,6 +2627,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BALLCONTROLLER_T2992829471_H
+#ifndef GYROMANAGER_T2156710008_H
+#define GYROMANAGER_T2156710008_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// GyroManager
+struct  GyroManager_t2156710008  : public MonoBehaviour_t3962482529
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // GYROMANAGER_T2156710008_H
 #ifndef GRAPHIC_T1660335611_H
 #define GRAPHIC_T1660335611_H
 #ifdef __clang__
@@ -3144,6 +3190,8 @@ extern "C"  Quaternion_t2301928331  Transform_get_rotation_m3502953881 (Transfor
 extern "C"  void Transform_set_rotation_m3524318132 (Transform_t3600365921 * __this, Quaternion_t2301928331  p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void MainCameraManager::PlayUpAnimation()
 extern "C"  void MainCameraManager_PlayUpAnimation_m3771979649 (MainCameraManager_t346017319 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.Component::GetComponent<UnityEngine.AudioSource>()
+#define Component_GetComponent_TisAudioSource_t3935305588_m1977431131(__this, method) ((  AudioSource_t3935305588 * (*) (Component_t1923634451 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m2906321015_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<BallManager>()
 #define GameObject_GetComponent_TisBallManager_t2004465268_m4041910020(__this, method) ((  BallManager_t2004465268 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method)
 // System.Void GameManager::ActionByScene()
@@ -3154,6 +3202,8 @@ extern "C"  int32_t SceneController_GetStatus_m4010357723 (SceneController_t2849
 extern "C"  bool InputManager_CheckTouch_m1272290747 (InputManager_t2926777569 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void SceneController::NextScene()
 extern "C"  void SceneController_NextScene_m2948675565 (SceneController_t2849316448 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.AudioSource::set_clip(UnityEngine.AudioClip)
+extern "C"  void AudioSource_set_clip_m31653938 (AudioSource_t3935305588 * __this, AudioClip_t3680889665 * p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // InputManager/InputKey InputManager::CheckPushKeys()
 extern "C"  int32_t InputManager_CheckPushKeys_m3035302622 (InputManager_t2926777569 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void PlayerController::turnLeft()
@@ -3918,8 +3968,26 @@ extern "C"  void GameManager__ctor_m180891015 (GameManager_t1536523654 * __this,
 {
 	{
 		// private GameStatus status = GameStatus.None;
-		__this->set_status_12(3);
+		__this->set_status_16(3);
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void GameManager::Start()
+extern "C"  void GameManager_Start_m2734446095 (GameManager_t1536523654 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (GameManager_Start_m2734446095_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// audioSource = GetComponent<AudioSource> ();
+		// audioSource = GetComponent<AudioSource> ();
+		AudioSource_t3935305588 * L_0 = Component_GetComponent_TisAudioSource_t3935305588_m1977431131(__this, /*hidden argument*/Component_GetComponent_TisAudioSource_t3935305588_m1977431131_RuntimeMethod_var);
+		__this->set_audioSource_12(L_0);
+		// }
 		return;
 	}
 }
@@ -3935,7 +4003,7 @@ extern "C"  void GameManager_Update_m1981238775 (GameManager_t1536523654 * __thi
 	{
 		// if(isGame) {
 		IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
-		bool L_0 = ((GameManager_t1536523654_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t1536523654_il2cpp_TypeInfo_var))->get_isGame_11();
+		bool L_0 = ((GameManager_t1536523654_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t1536523654_il2cpp_TypeInfo_var))->get_isGame_15();
 		if (!L_0)
 		{
 			goto IL_0035;
@@ -3947,16 +4015,16 @@ extern "C"  void GameManager_Update_m1981238775 (GameManager_t1536523654 * __thi
 		// pc = player.GetComponent<PlayerController> ();
 		NullCheck(L_1);
 		PlayerController_t2064355688 * L_2 = GameObject_GetComponent_TisPlayerController_t2064355688_m2241011631(L_1, /*hidden argument*/GameObject_GetComponent_TisPlayerController_t2064355688_m2241011631_RuntimeMethod_var);
-		__this->set_pc_9(L_2);
+		__this->set_pc_13(L_2);
 		// bm = ball.GetComponent<BallManager> ();
 		GameObject_t1113636619 * L_3 = __this->get_ball_5();
 		// bm = ball.GetComponent<BallManager> ();
 		NullCheck(L_3);
 		BallManager_t2004465268 * L_4 = GameObject_GetComponent_TisBallManager_t2004465268_m4041910020(L_3, /*hidden argument*/GameObject_GetComponent_TisBallManager_t2004465268_m4041910020_RuntimeMethod_var);
-		__this->set_bm_10(L_4);
+		__this->set_bm_14(L_4);
 		// isGame = false;
 		IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
-		((GameManager_t1536523654_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t1536523654_il2cpp_TypeInfo_var))->set_isGame_11((bool)0);
+		((GameManager_t1536523654_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t1536523654_il2cpp_TypeInfo_var))->set_isGame_15((bool)0);
 	}
 
 IL_0035:
@@ -3999,18 +4067,18 @@ extern "C"  void GameManager_ActionByScene_m107967549 (GameManager_t1536523654 *
 		int32_t L_3 = V_0;
 		if ((((int32_t)L_3) == ((int32_t)1)))
 		{
-			goto IL_004e;
+			goto IL_006a;
 		}
 	}
 	{
 		int32_t L_4 = V_0;
 		if ((((int32_t)L_4) == ((int32_t)2)))
 		{
-			goto IL_01bd;
+			goto IL_0265;
 		}
 	}
 	{
-		goto IL_01c2;
+		goto IL_026a;
 	}
 
 IL_0026:
@@ -4022,131 +4090,116 @@ IL_0026:
 		bool L_6 = InputManager_CheckTouch_m1272290747(L_5, /*hidden argument*/NULL);
 		if (!L_6)
 		{
-			goto IL_0049;
+			goto IL_0065;
 		}
 	}
 	{
 		// isGame = true;
 		IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
-		((GameManager_t1536523654_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t1536523654_il2cpp_TypeInfo_var))->set_isGame_11((bool)1);
+		((GameManager_t1536523654_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t1536523654_il2cpp_TypeInfo_var))->set_isGame_15((bool)1);
 		// sc.NextScene();
 		SceneController_t2849316448 * L_7 = __this->get_sc_2();
 		// sc.NextScene();
 		NullCheck(L_7);
 		SceneController_NextScene_m2948675565(L_7, /*hidden argument*/NULL);
+		// audioSource.clip = touchSound;
+		AudioSource_t3935305588 * L_8 = __this->get_audioSource_12();
+		AudioClip_t3680889665 * L_9 = __this->get_touchSound_11();
+		// audioSource.clip = touchSound;
+		NullCheck(L_8);
+		AudioSource_set_clip_m31653938(L_8, L_9, /*hidden argument*/NULL);
+		// audioSource.Play ();
+		AudioSource_t3935305588 * L_10 = __this->get_audioSource_12();
+		// audioSource.Play ();
+		NullCheck(L_10);
+		AudioSource_Play_m48294159(L_10, /*hidden argument*/NULL);
 	}
 
-IL_0049:
+IL_0065:
 	{
 		// break;
-		goto IL_01c2;
+		goto IL_026a;
 	}
 
-IL_004e:
+IL_006a:
 	{
 		// InputManager.InputKey key = im.CheckPushKeys ();
-		InputManager_t2926777569 * L_8 = __this->get_im_3();
+		InputManager_t2926777569 * L_11 = __this->get_im_3();
 		// InputManager.InputKey key = im.CheckPushKeys ();
-		NullCheck(L_8);
-		int32_t L_9 = InputManager_CheckPushKeys_m3035302622(L_8, /*hidden argument*/NULL);
-		V_1 = L_9;
+		NullCheck(L_11);
+		int32_t L_12 = InputManager_CheckPushKeys_m3035302622(L_11, /*hidden argument*/NULL);
+		V_1 = L_12;
 		// if (key == InputManager.InputKey.A) {
-		int32_t L_10 = V_1;
-		if ((!(((uint32_t)L_10) == ((uint32_t)2))))
+		int32_t L_13 = V_1;
+		if ((!(((uint32_t)L_13) == ((uint32_t)2))))
 		{
-			goto IL_006e;
+			goto IL_008a;
 		}
 	}
 	{
 		// pc.turnLeft ();
-		PlayerController_t2064355688 * L_11 = __this->get_pc_9();
+		PlayerController_t2064355688 * L_14 = __this->get_pc_13();
 		// pc.turnLeft ();
-		NullCheck(L_11);
-		PlayerController_turnLeft_m513767988(L_11, /*hidden argument*/NULL);
+		NullCheck(L_14);
+		PlayerController_turnLeft_m513767988(L_14, /*hidden argument*/NULL);
 	}
 
-IL_006e:
+IL_008a:
 	{
 		// if (key == InputManager.InputKey.D) {
-		int32_t L_12 = V_1;
-		if ((!(((uint32_t)L_12) == ((uint32_t)3))))
+		int32_t L_15 = V_1;
+		if ((!(((uint32_t)L_15) == ((uint32_t)3))))
 		{
-			goto IL_0082;
+			goto IL_009e;
 		}
 	}
 	{
 		// pc.turnRight ();
-		PlayerController_t2064355688 * L_13 = __this->get_pc_9();
+		PlayerController_t2064355688 * L_16 = __this->get_pc_13();
 		// pc.turnRight ();
-		NullCheck(L_13);
-		PlayerController_turnRight_m2510886191(L_13, /*hidden argument*/NULL);
+		NullCheck(L_16);
+		PlayerController_turnRight_m2510886191(L_16, /*hidden argument*/NULL);
 	}
 
-IL_0082:
+IL_009e:
 	{
 		// switch (cm.GetStatus ()) {
-		CameraManager_t3272490737 * L_14 = __this->get_cm_6();
+		CameraManager_t3272490737 * L_17 = __this->get_cm_6();
 		// switch (cm.GetStatus ()) {
-		NullCheck(L_14);
-		int32_t L_15 = CameraManager_GetStatus_m3786155143(L_14, /*hidden argument*/NULL);
-		V_2 = L_15;
+		NullCheck(L_17);
+		int32_t L_18 = CameraManager_GetStatus_m3786155143(L_17, /*hidden argument*/NULL);
+		V_2 = L_18;
 		// switch (cm.GetStatus ()) {
-		int32_t L_16 = V_2;
-		switch (L_16)
+		int32_t L_19 = V_2;
+		switch (L_19)
 		{
 			case 0:
 			{
-				goto IL_00ad;
+				goto IL_00c9;
 			}
 			case 1:
 			{
-				goto IL_01b8;
+				goto IL_0260;
 			}
 			case 2:
 			{
-				goto IL_00cf;
+				goto IL_0107;
 			}
 			case 3:
 			{
-				goto IL_013b;
+				goto IL_01ab;
 			}
 			case 4:
 			{
-				goto IL_015d;
+				goto IL_01e9;
 			}
 		}
 	}
 	{
-		goto IL_01b8;
+		goto IL_0260;
 	}
 
-IL_00ad:
-	{
-		// if (im.CheckTouch ()) {
-		InputManager_t2926777569 * L_17 = __this->get_im_3();
-		// if (im.CheckTouch ()) {
-		NullCheck(L_17);
-		bool L_18 = InputManager_CheckTouch_m1272290747(L_17, /*hidden argument*/NULL);
-		if (!L_18)
-		{
-			goto IL_00ca;
-		}
-	}
-	{
-		// cm.DownCamera ();
-		CameraManager_t3272490737 * L_19 = __this->get_cm_6();
-		// cm.DownCamera ();
-		NullCheck(L_19);
-		CameraManager_DownCamera_m1029157112(L_19, /*hidden argument*/NULL);
-	}
-
-IL_00ca:
-	{
-		// break;
-		goto IL_01b8;
-	}
-
-IL_00cf:
+IL_00c9:
 	{
 		// if (im.CheckTouch ()) {
 		InputManager_t2926777569 * L_20 = __this->get_im_3();
@@ -4155,177 +4208,258 @@ IL_00cf:
 		bool L_21 = InputManager_CheckTouch_m1272290747(L_20, /*hidden argument*/NULL);
 		if (!L_21)
 		{
-			goto IL_00ec;
+			goto IL_0102;
 		}
 	}
 	{
-		// bm.Fire ();
-		BallManager_t2004465268 * L_22 = __this->get_bm_10();
-		// bm.Fire ();
+		// cm.DownCamera ();
+		CameraManager_t3272490737 * L_22 = __this->get_cm_6();
+		// cm.DownCamera ();
 		NullCheck(L_22);
-		BallManager_Fire_m3244531822(L_22, /*hidden argument*/NULL);
-	}
-
-IL_00ec:
-	{
-		// if(sm.isFinish()) {
-		StageManager_t3296066545 * L_23 = __this->get_sm_7();
-		// if(sm.isFinish()) {
+		CameraManager_DownCamera_m1029157112(L_22, /*hidden argument*/NULL);
+		// audioSource.clip = touchSound;
+		AudioSource_t3935305588 * L_23 = __this->get_audioSource_12();
+		AudioClip_t3680889665 * L_24 = __this->get_touchSound_11();
+		// audioSource.clip = touchSound;
 		NullCheck(L_23);
-		bool L_24 = StageManager_isFinish_m2487550001(L_23, /*hidden argument*/NULL);
-		if (!L_24)
-		{
-			goto IL_0111;
-		}
-	}
-	{
-		// cm.SetStatus (CameraManager.CameraStatus.Finish);
-		CameraManager_t3272490737 * L_25 = __this->get_cm_6();
-		// cm.SetStatus (CameraManager.CameraStatus.Finish);
+		AudioSource_set_clip_m31653938(L_23, L_24, /*hidden argument*/NULL);
+		// audioSource.Play ();
+		AudioSource_t3935305588 * L_25 = __this->get_audioSource_12();
+		// audioSource.Play ();
 		NullCheck(L_25);
-		CameraManager_SetStatus_m2778707669(L_25, 3, /*hidden argument*/NULL);
-		// status = GameStatus.Clear;
-		__this->set_status_12(0);
+		AudioSource_Play_m48294159(L_25, /*hidden argument*/NULL);
 	}
 
-IL_0111:
+IL_0102:
 	{
-		// if(pc.checkDeath()) {
-		PlayerController_t2064355688 * L_26 = __this->get_pc_9();
-		// if(pc.checkDeath()) {
+		// break;
+		goto IL_0260;
+	}
+
+IL_0107:
+	{
+		// if (im.CheckTouch ()) {
+		InputManager_t2926777569 * L_26 = __this->get_im_3();
+		// if (im.CheckTouch ()) {
 		NullCheck(L_26);
-		bool L_27 = PlayerController_checkDeath_m889537932(L_26, /*hidden argument*/NULL);
+		bool L_27 = InputManager_CheckTouch_m1272290747(L_26, /*hidden argument*/NULL);
 		if (!L_27)
 		{
-			goto IL_0136;
+			goto IL_0124;
 		}
 	}
 	{
-		// cm.SetStatus (CameraManager.CameraStatus.Finish);
-		CameraManager_t3272490737 * L_28 = __this->get_cm_6();
-		// cm.SetStatus (CameraManager.CameraStatus.Finish);
+		// bm.Fire ();
+		BallManager_t2004465268 * L_28 = __this->get_bm_14();
+		// bm.Fire ();
 		NullCheck(L_28);
-		CameraManager_SetStatus_m2778707669(L_28, 3, /*hidden argument*/NULL);
-		// status = GameStatus.Over;
-		__this->set_status_12(1);
+		BallManager_Fire_m3244531822(L_28, /*hidden argument*/NULL);
 	}
 
-IL_0136:
+IL_0124:
 	{
-		// break;
-		goto IL_01b8;
-	}
-
-IL_013b:
-	{
-		// if (im.CheckTouch ()) {
-		InputManager_t2926777569 * L_29 = __this->get_im_3();
-		// if (im.CheckTouch ()) {
+		// if(sm.isFinish()) {
+		StageManager_t3296066545 * L_29 = __this->get_sm_7();
+		// if(sm.isFinish()) {
 		NullCheck(L_29);
-		bool L_30 = InputManager_CheckTouch_m1272290747(L_29, /*hidden argument*/NULL);
+		bool L_30 = StageManager_isFinish_m2487550001(L_29, /*hidden argument*/NULL);
 		if (!L_30)
 		{
-			goto IL_0158;
+			goto IL_0165;
 		}
 	}
 	{
-		// cm.UpCamera ();
+		// cm.SetStatus (CameraManager.CameraStatus.Finish);
 		CameraManager_t3272490737 * L_31 = __this->get_cm_6();
-		// cm.UpCamera ();
+		// cm.SetStatus (CameraManager.CameraStatus.Finish);
 		NullCheck(L_31);
-		CameraManager_UpCamera_m633613341(L_31, /*hidden argument*/NULL);
+		CameraManager_SetStatus_m2778707669(L_31, 3, /*hidden argument*/NULL);
+		// status = GameStatus.Clear;
+		__this->set_status_16(0);
+		// audioSource.clip = clearSound;
+		AudioSource_t3935305588 * L_32 = __this->get_audioSource_12();
+		AudioClip_t3680889665 * L_33 = __this->get_clearSound_9();
+		// audioSource.clip = clearSound;
+		NullCheck(L_32);
+		AudioSource_set_clip_m31653938(L_32, L_33, /*hidden argument*/NULL);
+		// audioSource.Play ();
+		AudioSource_t3935305588 * L_34 = __this->get_audioSource_12();
+		// audioSource.Play ();
+		NullCheck(L_34);
+		AudioSource_Play_m48294159(L_34, /*hidden argument*/NULL);
 	}
 
-IL_0158:
+IL_0165:
 	{
-		// break;
-		goto IL_01b8;
-	}
-
-IL_015d:
-	{
-		// switch(status) {
-		int32_t L_32 = __this->get_status_12();
-		V_3 = L_32;
-		// switch(status) {
-		int32_t L_33 = V_3;
-		if (!L_33)
-		{
-			goto IL_0176;
-		}
-	}
-	{
-		int32_t L_34 = V_3;
-		if ((((int32_t)L_34) == ((int32_t)1)))
-		{
-			goto IL_0186;
-		}
-	}
-	{
-		goto IL_0196;
-	}
-
-IL_0176:
-	{
-		// stm.ShowClear ();
-		StageTextManager_t1380114822 * L_35 = __this->get_stm_8();
-		// stm.ShowClear ();
+		// if(pc.checkDeath()) {
+		PlayerController_t2064355688 * L_35 = __this->get_pc_13();
+		// if(pc.checkDeath()) {
 		NullCheck(L_35);
-		StageTextManager_ShowClear_m337854032(L_35, /*hidden argument*/NULL);
-		// break;
-		goto IL_0196;
-	}
-
-IL_0186:
-	{
-		// stm.ShowOver ();
-		StageTextManager_t1380114822 * L_36 = __this->get_stm_8();
-		// stm.ShowOver ();
-		NullCheck(L_36);
-		StageTextManager_ShowOver_m1091829582(L_36, /*hidden argument*/NULL);
-		// break;
-		goto IL_0196;
-	}
-
-IL_0196:
-	{
-		// if (im.CheckTouch ()) {
-		InputManager_t2926777569 * L_37 = __this->get_im_3();
-		// if (im.CheckTouch ()) {
-		NullCheck(L_37);
-		bool L_38 = InputManager_CheckTouch_m1272290747(L_37, /*hidden argument*/NULL);
-		if (!L_38)
+		bool L_36 = PlayerController_checkDeath_m889537932(L_35, /*hidden argument*/NULL);
+		if (!L_36)
 		{
-			goto IL_01b3;
+			goto IL_01a6;
 		}
 	}
 	{
+		// cm.SetStatus (CameraManager.CameraStatus.Finish);
+		CameraManager_t3272490737 * L_37 = __this->get_cm_6();
+		// cm.SetStatus (CameraManager.CameraStatus.Finish);
+		NullCheck(L_37);
+		CameraManager_SetStatus_m2778707669(L_37, 3, /*hidden argument*/NULL);
+		// status = GameStatus.Over;
+		__this->set_status_16(1);
+		// audioSource.clip = overSound;
+		AudioSource_t3935305588 * L_38 = __this->get_audioSource_12();
+		AudioClip_t3680889665 * L_39 = __this->get_overSound_10();
+		// audioSource.clip = overSound;
+		NullCheck(L_38);
+		AudioSource_set_clip_m31653938(L_38, L_39, /*hidden argument*/NULL);
+		// audioSource.Play ();
+		AudioSource_t3935305588 * L_40 = __this->get_audioSource_12();
+		// audioSource.Play ();
+		NullCheck(L_40);
+		AudioSource_Play_m48294159(L_40, /*hidden argument*/NULL);
+	}
+
+IL_01a6:
+	{
+		// break;
+		goto IL_0260;
+	}
+
+IL_01ab:
+	{
+		// if (im.CheckTouch ()) {
+		InputManager_t2926777569 * L_41 = __this->get_im_3();
+		// if (im.CheckTouch ()) {
+		NullCheck(L_41);
+		bool L_42 = InputManager_CheckTouch_m1272290747(L_41, /*hidden argument*/NULL);
+		if (!L_42)
+		{
+			goto IL_01e4;
+		}
+	}
+	{
+		// cm.UpCamera ();
+		CameraManager_t3272490737 * L_43 = __this->get_cm_6();
+		// cm.UpCamera ();
+		NullCheck(L_43);
+		CameraManager_UpCamera_m633613341(L_43, /*hidden argument*/NULL);
+		// audioSource.clip = touchSound;
+		AudioSource_t3935305588 * L_44 = __this->get_audioSource_12();
+		AudioClip_t3680889665 * L_45 = __this->get_touchSound_11();
+		// audioSource.clip = touchSound;
+		NullCheck(L_44);
+		AudioSource_set_clip_m31653938(L_44, L_45, /*hidden argument*/NULL);
+		// audioSource.Play ();
+		AudioSource_t3935305588 * L_46 = __this->get_audioSource_12();
+		// audioSource.Play ();
+		NullCheck(L_46);
+		AudioSource_Play_m48294159(L_46, /*hidden argument*/NULL);
+	}
+
+IL_01e4:
+	{
+		// break;
+		goto IL_0260;
+	}
+
+IL_01e9:
+	{
+		// switch(status) {
+		int32_t L_47 = __this->get_status_16();
+		V_3 = L_47;
+		// switch(status) {
+		int32_t L_48 = V_3;
+		if (!L_48)
+		{
+			goto IL_0202;
+		}
+	}
+	{
+		int32_t L_49 = V_3;
+		if ((((int32_t)L_49) == ((int32_t)1)))
+		{
+			goto IL_0212;
+		}
+	}
+	{
+		goto IL_0222;
+	}
+
+IL_0202:
+	{
+		// stm.ShowClear ();
+		StageTextManager_t1380114822 * L_50 = __this->get_stm_8();
+		// stm.ShowClear ();
+		NullCheck(L_50);
+		StageTextManager_ShowClear_m337854032(L_50, /*hidden argument*/NULL);
+		// break;
+		goto IL_0222;
+	}
+
+IL_0212:
+	{
+		// stm.ShowOver ();
+		StageTextManager_t1380114822 * L_51 = __this->get_stm_8();
+		// stm.ShowOver ();
+		NullCheck(L_51);
+		StageTextManager_ShowOver_m1091829582(L_51, /*hidden argument*/NULL);
+		// break;
+		goto IL_0222;
+	}
+
+IL_0222:
+	{
+		// if (im.CheckTouch ()) {
+		InputManager_t2926777569 * L_52 = __this->get_im_3();
+		// if (im.CheckTouch ()) {
+		NullCheck(L_52);
+		bool L_53 = InputManager_CheckTouch_m1272290747(L_52, /*hidden argument*/NULL);
+		if (!L_53)
+		{
+			goto IL_025b;
+		}
+	}
+	{
+		// audioSource.clip = touchSound;
+		AudioSource_t3935305588 * L_54 = __this->get_audioSource_12();
+		AudioClip_t3680889665 * L_55 = __this->get_touchSound_11();
+		// audioSource.clip = touchSound;
+		NullCheck(L_54);
+		AudioSource_set_clip_m31653938(L_54, L_55, /*hidden argument*/NULL);
+		// audioSource.Play ();
+		AudioSource_t3935305588 * L_56 = __this->get_audioSource_12();
+		// audioSource.Play ();
+		NullCheck(L_56);
+		AudioSource_Play_m48294159(L_56, /*hidden argument*/NULL);
 		// sm.NextStage ();
-		StageManager_t3296066545 * L_39 = __this->get_sm_7();
+		StageManager_t3296066545 * L_57 = __this->get_sm_7();
 		// sm.NextStage ();
-		NullCheck(L_39);
-		StageManager_NextStage_m2693353284(L_39, /*hidden argument*/NULL);
+		NullCheck(L_57);
+		StageManager_NextStage_m2693353284(L_57, /*hidden argument*/NULL);
 	}
 
-IL_01b3:
+IL_025b:
 	{
 		// break;
-		goto IL_01b8;
+		goto IL_0260;
 	}
 
-IL_01b8:
+IL_0260:
 	{
 		// break;
-		goto IL_01c2;
+		goto IL_026a;
 	}
 
-IL_01bd:
+IL_0265:
 	{
 		// break;
-		goto IL_01c2;
+		goto IL_026a;
 	}
 
-IL_01c2:
+IL_026a:
 	{
 		// }
 		return;
@@ -4342,7 +4476,7 @@ extern "C"  void GameManager__cctor_m4243923930 (RuntimeObject * __this /* stati
 	}
 	{
 		// private static bool isGame = false;
-		((GameManager_t1536523654_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t1536523654_il2cpp_TypeInfo_var))->set_isGame_11((bool)0);
+		((GameManager_t1536523654_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t1536523654_il2cpp_TypeInfo_var))->set_isGame_15((bool)0);
 		return;
 	}
 }
@@ -5170,6 +5304,23 @@ extern "C"  void SoundController_PlaySound_m4128028087 (SoundController_t2462365
 		NullCheck(L_1);
 		Vector3_t3722313464  L_2 = Transform_get_position_m36019626(L_1, /*hidden argument*/NULL);
 		// AudioSource.PlayClipAtPoint (sound, transform.position);
+		AudioSource_PlayClipAtPoint_m3293894611(NULL /*static, unused*/, L_0, L_2, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void SoundController::PlaySound2()
+extern "C"  void SoundController_PlaySound2_m1037078967 (SoundController_t2462365417 * __this, const RuntimeMethod* method)
+{
+	{
+		// AudioSource.PlayClipAtPoint (soundSub1, transform.position);
+		AudioClip_t3680889665 * L_0 = __this->get_soundSub1_3();
+		// AudioSource.PlayClipAtPoint (soundSub1, transform.position);
+		Transform_t3600365921 * L_1 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
+		// AudioSource.PlayClipAtPoint (soundSub1, transform.position);
+		NullCheck(L_1);
+		Vector3_t3722313464  L_2 = Transform_get_position_m36019626(L_1, /*hidden argument*/NULL);
+		// AudioSource.PlayClipAtPoint (soundSub1, transform.position);
 		AudioSource_PlayClipAtPoint_m3293894611(NULL /*static, unused*/, L_0, L_2, /*hidden argument*/NULL);
 		// }
 		return;

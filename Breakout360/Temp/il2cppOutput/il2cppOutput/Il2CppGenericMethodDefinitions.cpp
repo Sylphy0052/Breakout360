@@ -18,7 +18,7 @@
 
 
 
-extern const Il2CppMethodSpec g_Il2CppMethodSpecTable[5401] = 
+extern const Il2CppMethodSpec g_Il2CppMethodSpecTable[5402] = 
 {
 	{ 86, 0, -1 },
 	{ 94, 0, -1 },
@@ -1188,6 +1188,7 @@ extern const Il2CppMethodSpec g_Il2CppMethodSpecTable[5401] =
 	{ 8301, -1, 455 },
 	{ 8301, -1, 456 },
 	{ 8301, -1, 457 },
+	{ 8234, -1, 455 },
 	{ 8301, -1, 458 },
 	{ 8234, -1, 459 },
 	{ 843, -1, 26 },

@@ -7,15 +7,14 @@ public class GameManager : MonoBehaviour {
 	public InputManager im;
 	public GameObject player;
 	public GameObject ball;
+	public CameraManager cm;
 
 	private PlayerController pc;
 	private BallManager bm;
 	private static bool isGame = false;
-	
-	// Update is called once per frame
+
 	void Update () {
 		if(isGame) {
-			Debug.Log ("Load Game");
 			pc = player.GetComponent<PlayerController> ();
 			bm = ball.GetComponent<BallManager> ();
 			isGame = false;
@@ -33,16 +32,32 @@ public class GameManager : MonoBehaviour {
 			}
 			break;
 		case SceneController.GameStatus.Game:
-			if (im.CheckTouch ()) {
-				bm.Fire ();
+			switch (cm.GetStatus ()) {
+			case CameraManager.CameraStatus.First:
+				if (im.CheckTouch ()) {
+					cm.DownCamera ();
+				}
+				break;
+			case CameraManager.CameraStatus.Playing:
+				if (im.CheckTouch ()) {
+					bm.Fire ();
+				}
+				InputManager.InputKey key = im.CheckPushKeys ();
+				if (key == InputManager.InputKey.A) {
+					pc.turnLeft ();
+				}
+				if (key == InputManager.InputKey.D) {
+					pc.turnRight ();
+				}
+				break;
+			case CameraManager.CameraStatus.End:
+				if (im.CheckTouch ()) {
+					// dosomething;
+				}
+				break;
 			}
-			InputManager.InputKey key = im.CheckPushKeys ();
-			if (key == InputManager.InputKey.A) {
-				pc.turnLeft ();
-			}
-			if (key == InputManager.InputKey.D) {
-				pc.turnRight ();
-			}
+			break;
+		case SceneController.GameStatus.Config:
 			break;
 		}
 	}

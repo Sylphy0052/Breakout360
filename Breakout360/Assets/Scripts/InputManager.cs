@@ -14,10 +14,6 @@ public class InputManager : MonoBehaviour {
 		return InputKey.None;
 	}
 
-	public void checkGyro() {
-
-	}
-
 	public bool CheckTouch() {
 		if(AppUtil.GetTouch() == AppUtil.TouchInfo.Ended) {
 			return true;

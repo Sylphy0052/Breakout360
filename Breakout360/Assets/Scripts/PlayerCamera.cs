@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour {
 	public GameObject player;
+
 	private Quaternion firstDirection;
 
-	// Use this for initialization
-	void Start () {
-		firstDirection = transform.rotation;
+	void Start() {
+		firstDirection = this.transform.rotation;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		SetDirection ();
 	}
@@ -24,4 +23,6 @@ public class PlayerCamera : MonoBehaviour {
 	private void SetDirection() {
 		this.transform.rotation = GetDirection();
 	}
+
+
 }

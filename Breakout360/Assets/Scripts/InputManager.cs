@@ -3,41 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour {
-	public GameObject player;
-	public GameObject ball;
 
-	private PlayerController pc;
-	private BallManager bm;
-
-	// Use this for initialization
-	void Start () {
-		pc = player.GetComponent<PlayerController> ();
-		bm = ball.GetComponent<BallManager> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		checkPushKeys ();
-		checkGyro ();
-		checkTouch ();
-	}
-
-	private void checkPushKeys() {
+	public InputKey CheckPushKeys() {
 		if(Input.GetKey(KeyCode.A)) {
-			pc.turnLeft ();
+			return InputKey.A;
 		}
 		if(Input.GetKey(KeyCode.D)) {
-			pc.turnRight ();
+			return InputKey.D;
 		}
+		return InputKey.None;
 	}
 
-	private void checkGyro() {
+	public void checkGyro() {
 
 	}
 
-	private void checkTouch() {
+	public bool CheckTouch() {
 		if(AppUtil.GetTouch() == AppUtil.TouchInfo.Ended) {
-			bm.Fire ();
+			return true;
 		}
+		return false;
+	}
+
+	public enum InputKey {
+		None,
+		Touch,
+		A,
+		D,
 	}
 }

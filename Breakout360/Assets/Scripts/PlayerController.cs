@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void Death() {
 		isDeath = true;
+		this.gameObject.GetComponent<SoundController> ().PlaySound ();
 	}
 
 	public bool checkDeath() {

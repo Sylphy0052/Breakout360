@@ -9,6 +9,7 @@ public class PlayerCamera : MonoBehaviour {
 
 	void Start() {
 		firstDirection = this.transform.rotation;
+//		this.gameObject.GetComponent<SoundController> ().PlaySound ();
 	}
 
 	void Update () {

@@ -6,5 +6,6 @@ public class BlockController : MonoBehaviour {
 
 	public void Break() {
 		Destroy (this.gameObject);
+		this.gameObject.GetComponent<SoundController> ().PlaySound ();
 	}
 }

@@ -1863,12 +1863,14 @@ struct  PlayerController_t2064355688  : public MonoBehaviour_t3962482529
 public:
 	// GyroManager PlayerController::gm
 	GyroManager_t2156710008 * ___gm_2;
+	// CameraManager PlayerController::cm
+	CameraManager_t3272490737 * ___cm_3;
 	// System.Single PlayerController::turnSpeed
-	float ___turnSpeed_3;
+	float ___turnSpeed_4;
 	// UnityEngine.Quaternion PlayerController::firstDirection
-	Quaternion_t2301928331  ___firstDirection_4;
+	Quaternion_t2301928331  ___firstDirection_5;
 	// System.Boolean PlayerController::isDeath
-	bool ___isDeath_5;
+	bool ___isDeath_6;
 
 public:
 	inline static int32_t get_offset_of_gm_2() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___gm_2)); }
@@ -1880,28 +1882,37 @@ public:
 		Il2CppCodeGenWriteBarrier((&___gm_2), value);
 	}
 
-	inline static int32_t get_offset_of_turnSpeed_3() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___turnSpeed_3)); }
-	inline float get_turnSpeed_3() const { return ___turnSpeed_3; }
-	inline float* get_address_of_turnSpeed_3() { return &___turnSpeed_3; }
-	inline void set_turnSpeed_3(float value)
+	inline static int32_t get_offset_of_cm_3() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___cm_3)); }
+	inline CameraManager_t3272490737 * get_cm_3() const { return ___cm_3; }
+	inline CameraManager_t3272490737 ** get_address_of_cm_3() { return &___cm_3; }
+	inline void set_cm_3(CameraManager_t3272490737 * value)
 	{
-		___turnSpeed_3 = value;
+		___cm_3 = value;
+		Il2CppCodeGenWriteBarrier((&___cm_3), value);
 	}
 
-	inline static int32_t get_offset_of_firstDirection_4() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___firstDirection_4)); }
-	inline Quaternion_t2301928331  get_firstDirection_4() const { return ___firstDirection_4; }
-	inline Quaternion_t2301928331 * get_address_of_firstDirection_4() { return &___firstDirection_4; }
-	inline void set_firstDirection_4(Quaternion_t2301928331  value)
+	inline static int32_t get_offset_of_turnSpeed_4() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___turnSpeed_4)); }
+	inline float get_turnSpeed_4() const { return ___turnSpeed_4; }
+	inline float* get_address_of_turnSpeed_4() { return &___turnSpeed_4; }
+	inline void set_turnSpeed_4(float value)
 	{
-		___firstDirection_4 = value;
+		___turnSpeed_4 = value;
 	}
 
-	inline static int32_t get_offset_of_isDeath_5() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___isDeath_5)); }
-	inline bool get_isDeath_5() const { return ___isDeath_5; }
-	inline bool* get_address_of_isDeath_5() { return &___isDeath_5; }
-	inline void set_isDeath_5(bool value)
+	inline static int32_t get_offset_of_firstDirection_5() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___firstDirection_5)); }
+	inline Quaternion_t2301928331  get_firstDirection_5() const { return ___firstDirection_5; }
+	inline Quaternion_t2301928331 * get_address_of_firstDirection_5() { return &___firstDirection_5; }
+	inline void set_firstDirection_5(Quaternion_t2301928331  value)
 	{
-		___isDeath_5 = value;
+		___firstDirection_5 = value;
+	}
+
+	inline static int32_t get_offset_of_isDeath_6() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___isDeath_6)); }
+	inline bool get_isDeath_6() const { return ___isDeath_6; }
+	inline bool* get_address_of_isDeath_6() { return &___isDeath_6; }
+	inline void set_isDeath_6(bool value)
+	{
+		___isDeath_6 = value;
 	}
 };
 
@@ -2374,8 +2385,10 @@ public:
 	Text_t1901882714 * ___clearText_3;
 	// UnityEngine.UI.Text StageManager::overText
 	Text_t1901882714 * ___overText_4;
+	// CameraManager StageManager::cm
+	CameraManager_t3272490737 * ___cm_5;
 	// System.Int32 StageManager::blockNum
-	int32_t ___blockNum_6;
+	int32_t ___blockNum_7;
 
 public:
 	inline static int32_t get_offset_of_scoreText_2() { return static_cast<int32_t>(offsetof(StageManager_t3296066545, ___scoreText_2)); }
@@ -2405,12 +2418,21 @@ public:
 		Il2CppCodeGenWriteBarrier((&___overText_4), value);
 	}
 
-	inline static int32_t get_offset_of_blockNum_6() { return static_cast<int32_t>(offsetof(StageManager_t3296066545, ___blockNum_6)); }
-	inline int32_t get_blockNum_6() const { return ___blockNum_6; }
-	inline int32_t* get_address_of_blockNum_6() { return &___blockNum_6; }
-	inline void set_blockNum_6(int32_t value)
+	inline static int32_t get_offset_of_cm_5() { return static_cast<int32_t>(offsetof(StageManager_t3296066545, ___cm_5)); }
+	inline CameraManager_t3272490737 * get_cm_5() const { return ___cm_5; }
+	inline CameraManager_t3272490737 ** get_address_of_cm_5() { return &___cm_5; }
+	inline void set_cm_5(CameraManager_t3272490737 * value)
 	{
-		___blockNum_6 = value;
+		___cm_5 = value;
+		Il2CppCodeGenWriteBarrier((&___cm_5), value);
+	}
+
+	inline static int32_t get_offset_of_blockNum_7() { return static_cast<int32_t>(offsetof(StageManager_t3296066545, ___blockNum_7)); }
+	inline int32_t get_blockNum_7() const { return ___blockNum_7; }
+	inline int32_t* get_address_of_blockNum_7() { return &___blockNum_7; }
+	inline void set_blockNum_7(int32_t value)
+	{
+		___blockNum_7 = value;
 	}
 };
 
@@ -2418,15 +2440,15 @@ struct StageManager_t3296066545_StaticFields
 {
 public:
 	// System.Int32 StageManager::currentStage
-	int32_t ___currentStage_5;
+	int32_t ___currentStage_6;
 
 public:
-	inline static int32_t get_offset_of_currentStage_5() { return static_cast<int32_t>(offsetof(StageManager_t3296066545_StaticFields, ___currentStage_5)); }
-	inline int32_t get_currentStage_5() const { return ___currentStage_5; }
-	inline int32_t* get_address_of_currentStage_5() { return &___currentStage_5; }
-	inline void set_currentStage_5(int32_t value)
+	inline static int32_t get_offset_of_currentStage_6() { return static_cast<int32_t>(offsetof(StageManager_t3296066545_StaticFields, ___currentStage_6)); }
+	inline int32_t get_currentStage_6() const { return ___currentStage_6; }
+	inline int32_t* get_address_of_currentStage_6() { return &___currentStage_6; }
+	inline void set_currentStage_6(int32_t value)
 	{
-		___currentStage_5 = value;
+		___currentStage_6 = value;
 	}
 };
 
@@ -4940,9 +4962,9 @@ extern "C"  void PlayerController__ctor_m1333951952 (PlayerController_t206435568
 {
 	{
 		// private float turnSpeed = 3.0f;
-		__this->set_turnSpeed_3((3.0f));
+		__this->set_turnSpeed_4((3.0f));
 		// private bool isDeath = false;
-		__this->set_isDeath_5((bool)0);
+		__this->set_isDeath_6((bool)0);
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -4957,7 +4979,7 @@ extern "C"  void PlayerController_Start_m1746698410 (PlayerController_t206435568
 		// firstDirection = transform.rotation;
 		NullCheck(L_0);
 		Quaternion_t2301928331  L_1 = Transform_get_rotation_m3502953881(L_0, /*hidden argument*/NULL);
-		__this->set_firstDirection_4(L_1);
+		__this->set_firstDirection_5(L_1);
 		// }
 		return;
 	}
@@ -5011,7 +5033,7 @@ extern "C"  Quaternion_t2301928331  PlayerController_GetDirection_m1863949902 (P
 		Quaternion_t2301928331  L_1 = Transform_get_rotation_m3502953881(L_0, /*hidden argument*/NULL);
 		V_0 = L_1;
 		// return new Quaternion (firstDirection.x, playerDirection.y, playerDirection.z, playerDirection.w);
-		Quaternion_t2301928331 * L_2 = __this->get_address_of_firstDirection_4();
+		Quaternion_t2301928331 * L_2 = __this->get_address_of_firstDirection_5();
 		float L_3 = L_2->get_x_0();
 		float L_4 = (&V_0)->get_y_1();
 		float L_5 = (&V_0)->get_z_2();
@@ -5046,10 +5068,10 @@ extern "C"  void PlayerController_SetGyroDirection_m4240618230 (PlayerController
 		// this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, firstDirection.z, gyroDirection.w);
 		// this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, firstDirection.z, gyroDirection.w);
 		Transform_t3600365921 * L_2 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		Quaternion_t2301928331 * L_3 = __this->get_address_of_firstDirection_4();
+		Quaternion_t2301928331 * L_3 = __this->get_address_of_firstDirection_5();
 		float L_4 = L_3->get_x_0();
 		float L_5 = (&V_0)->get_y_1();
-		Quaternion_t2301928331 * L_6 = __this->get_address_of_firstDirection_4();
+		Quaternion_t2301928331 * L_6 = __this->get_address_of_firstDirection_5();
 		float L_7 = L_6->get_z_2();
 		float L_8 = (&V_0)->get_w_3();
 		// this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, firstDirection.z, gyroDirection.w);
@@ -5070,7 +5092,7 @@ extern "C"  void PlayerController_turnRight_m2510886191 (PlayerController_t20643
 		// this.transform.Rotate (new Vector3(0, turnSpeed, 0));
 		// this.transform.Rotate (new Vector3(0, turnSpeed, 0));
 		Transform_t3600365921 * L_0 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		float L_1 = __this->get_turnSpeed_3();
+		float L_1 = __this->get_turnSpeed_4();
 		// this.transform.Rotate (new Vector3(0, turnSpeed, 0));
 		Vector3_t3722313464  L_2;
 		memset(&L_2, 0, sizeof(L_2));
@@ -5089,7 +5111,7 @@ extern "C"  void PlayerController_turnLeft_m513767988 (PlayerController_t2064355
 		// this.transform.Rotate (new Vector3(0, -turnSpeed, 0));
 		// this.transform.Rotate (new Vector3(0, -turnSpeed, 0));
 		Transform_t3600365921 * L_0 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		float L_1 = __this->get_turnSpeed_3();
+		float L_1 = __this->get_turnSpeed_4();
 		// this.transform.Rotate (new Vector3(0, -turnSpeed, 0));
 		Vector3_t3722313464  L_2;
 		memset(&L_2, 0, sizeof(L_2));
@@ -5112,16 +5134,31 @@ extern "C"  void PlayerController_Death_m560526479 (PlayerController_t2064355688
 	}
 	{
 		// isDeath = true;
-		__this->set_isDeath_5((bool)1);
-		// this.gameObject.GetComponent<SoundController> ().PlaySound ();
-		// this.gameObject.GetComponent<SoundController> ().PlaySound ();
-		GameObject_t1113636619 * L_0 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
-		// this.gameObject.GetComponent<SoundController> ().PlaySound ();
+		__this->set_isDeath_6((bool)1);
+		// if(cm.GetStatus() == CameraManager.CameraStatus.Playing) {
+		CameraManager_t3272490737 * L_0 = __this->get_cm_3();
+		// if(cm.GetStatus() == CameraManager.CameraStatus.Playing) {
 		NullCheck(L_0);
-		SoundController_t2462365417 * L_1 = GameObject_GetComponent_TisSoundController_t2462365417_m3930652079(L_0, /*hidden argument*/GameObject_GetComponent_TisSoundController_t2462365417_m3930652079_RuntimeMethod_var);
+		int32_t L_1 = CameraManager_GetStatus_m3786155143(L_0, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_1) == ((uint32_t)2))))
+		{
+			goto IL_002b;
+		}
+	}
+	{
 		// this.gameObject.GetComponent<SoundController> ().PlaySound ();
-		NullCheck(L_1);
-		SoundController_PlaySound_m4128028087(L_1, /*hidden argument*/NULL);
+		// this.gameObject.GetComponent<SoundController> ().PlaySound ();
+		GameObject_t1113636619 * L_2 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		// this.gameObject.GetComponent<SoundController> ().PlaySound ();
+		NullCheck(L_2);
+		SoundController_t2462365417 * L_3 = GameObject_GetComponent_TisSoundController_t2462365417_m3930652079(L_2, /*hidden argument*/GameObject_GetComponent_TisSoundController_t2462365417_m3930652079_RuntimeMethod_var);
+		// this.gameObject.GetComponent<SoundController> ().PlaySound ();
+		NullCheck(L_3);
+		SoundController_PlaySound_m4128028087(L_3, /*hidden argument*/NULL);
+	}
+
+IL_002b:
+	{
 		// }
 		return;
 	}
@@ -5132,7 +5169,7 @@ extern "C"  bool PlayerController_checkDeath_m889537932 (PlayerController_t20643
 	bool V_0 = false;
 	{
 		// return isDeath;
-		bool L_0 = __this->get_isDeath_5();
+		bool L_0 = __this->get_isDeath_6();
 		V_0 = L_0;
 		goto IL_000d;
 	}
@@ -5389,8 +5426,8 @@ extern "C"  void StageManager_NextStage_m2693353284 (StageManager_t3296066545 * 
 	{
 		// currentStage++;
 		IL2CPP_RUNTIME_CLASS_INIT(StageManager_t3296066545_il2cpp_TypeInfo_var);
-		int32_t L_0 = ((StageManager_t3296066545_StaticFields*)il2cpp_codegen_static_fields_for(StageManager_t3296066545_il2cpp_TypeInfo_var))->get_currentStage_5();
-		((StageManager_t3296066545_StaticFields*)il2cpp_codegen_static_fields_for(StageManager_t3296066545_il2cpp_TypeInfo_var))->set_currentStage_5(((int32_t)il2cpp_codegen_add((int32_t)L_0, (int32_t)1)));
+		int32_t L_0 = ((StageManager_t3296066545_StaticFields*)il2cpp_codegen_static_fields_for(StageManager_t3296066545_il2cpp_TypeInfo_var))->get_currentStage_6();
+		((StageManager_t3296066545_StaticFields*)il2cpp_codegen_static_fields_for(StageManager_t3296066545_il2cpp_TypeInfo_var))->set_currentStage_6(((int32_t)il2cpp_codegen_add((int32_t)L_0, (int32_t)1)));
 		// }
 		return;
 	}
@@ -5409,10 +5446,10 @@ extern "C"  void StageManager_CheckBlockNum_m2173459418 (StageManager_t329606654
 		// blockNum = GameObject.FindGameObjectsWithTag ("Block").Length;
 		GameObjectU5BU5D_t3328599146* L_0 = GameObject_FindGameObjectsWithTag_m2585173894(NULL /*static, unused*/, _stringLiteral424788472, /*hidden argument*/NULL);
 		NullCheck(L_0);
-		__this->set_blockNum_6((((int32_t)((int32_t)(((RuntimeArray *)L_0)->max_length)))));
+		__this->set_blockNum_7((((int32_t)((int32_t)(((RuntimeArray *)L_0)->max_length)))));
 		// scoreText.text = "Left:" + blockNum;
 		Text_t1901882714 * L_1 = __this->get_scoreText_2();
-		int32_t L_2 = __this->get_blockNum_6();
+		int32_t L_2 = __this->get_blockNum_7();
 		int32_t L_3 = L_2;
 		RuntimeObject * L_4 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_3);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
@@ -5421,7 +5458,7 @@ extern "C"  void StageManager_CheckBlockNum_m2173459418 (StageManager_t329606654
 		NullCheck(L_1);
 		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, L_5);
 		// if(blockNum == 0) {
-		int32_t L_6 = __this->get_blockNum_6();
+		int32_t L_6 = __this->get_blockNum_7();
 		if (L_6)
 		{
 			goto IL_0051;
@@ -5440,27 +5477,31 @@ extern "C"  void StageManager_CheckBlockNum_m2173459418 (StageManager_t329606654
 
 IL_0051:
 	{
-		// if (GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
-		// if (GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
-		GameObjectU5BU5D_t3328599146* L_9 = GameObject_FindGameObjectsWithTag_m2585173894(NULL /*static, unused*/, _stringLiteral1201842172, /*hidden argument*/NULL);
+		// if (cm.GetStatus() == CameraManager.CameraStatus.Playing & GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
+		CameraManager_t3272490737 * L_9 = __this->get_cm_5();
+		// if (cm.GetStatus() == CameraManager.CameraStatus.Playing & GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
 		NullCheck(L_9);
-		if ((((int32_t)((int32_t)(((RuntimeArray *)L_9)->max_length)))))
+		int32_t L_10 = CameraManager_GetStatus_m3786155143(L_9, /*hidden argument*/NULL);
+		// if (cm.GetStatus() == CameraManager.CameraStatus.Playing & GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
+		GameObjectU5BU5D_t3328599146* L_11 = GameObject_FindGameObjectsWithTag_m2585173894(NULL /*static, unused*/, _stringLiteral1201842172, /*hidden argument*/NULL);
+		NullCheck(L_11);
+		if (!((int32_t)((int32_t)((((int32_t)L_10) == ((int32_t)2))? 1 : 0)&(int32_t)((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_11)->max_length))))) == ((int32_t)0))? 1 : 0))))
 		{
-			goto IL_0075;
+			goto IL_0087;
 		}
 	}
 	{
 		// overText.gameObject.SetActive (true);
-		Text_t1901882714 * L_10 = __this->get_overText_4();
+		Text_t1901882714 * L_12 = __this->get_overText_4();
 		// overText.gameObject.SetActive (true);
-		NullCheck(L_10);
-		GameObject_t1113636619 * L_11 = Component_get_gameObject_m442555142(L_10, /*hidden argument*/NULL);
+		NullCheck(L_12);
+		GameObject_t1113636619 * L_13 = Component_get_gameObject_m442555142(L_12, /*hidden argument*/NULL);
 		// overText.gameObject.SetActive (true);
-		NullCheck(L_11);
-		GameObject_SetActive_m796801857(L_11, (bool)1, /*hidden argument*/NULL);
+		NullCheck(L_13);
+		GameObject_SetActive_m796801857(L_13, (bool)1, /*hidden argument*/NULL);
 	}
 
-IL_0075:
+IL_0087:
 	{
 		// }
 		return;
@@ -5472,7 +5513,7 @@ extern "C"  bool StageManager_isFinish_m2487550001 (StageManager_t3296066545 * _
 	bool V_0 = false;
 	{
 		// return blockNum == 0;
-		int32_t L_0 = __this->get_blockNum_6();
+		int32_t L_0 = __this->get_blockNum_7();
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		goto IL_0010;
 	}
@@ -5495,7 +5536,7 @@ extern "C"  void StageManager__cctor_m2616850515 (RuntimeObject * __this /* stat
 	}
 	{
 		// private static int currentStage = 1;
-		((StageManager_t3296066545_StaticFields*)il2cpp_codegen_static_fields_for(StageManager_t3296066545_il2cpp_TypeInfo_var))->set_currentStage_5(1);
+		((StageManager_t3296066545_StaticFields*)il2cpp_codegen_static_fields_for(StageManager_t3296066545_il2cpp_TypeInfo_var))->set_currentStage_6(1);
 		return;
 	}
 }

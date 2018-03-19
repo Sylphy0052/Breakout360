@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 	public GyroManager gm;
+	public CameraManager cm;
 
 	private float turnSpeed = 3.0f;
 	private Quaternion firstDirection;
@@ -39,7 +40,9 @@ public class PlayerController : MonoBehaviour {
 
 	public void Death() {
 		isDeath = true;
-		this.gameObject.GetComponent<SoundController> ().PlaySound ();
+		if(cm.GetStatus() == CameraManager.CameraStatus.Playing) {
+			this.gameObject.GetComponent<SoundController> ().PlaySound ();
+		}
 	}
 
 	public bool checkDeath() {

@@ -53,12 +53,12 @@ struct IAsyncResult_t767004451;
 struct AsyncCallback_t3962456242;
 // UnityEngine.UI.Text
 struct Text_t1901882714;
+// CameraManager
+struct CameraManager_t3272490737;
 // SceneController
 struct SceneController_t2849316448;
 // InputManager
 struct InputManager_t2926777569;
-// CameraManager
-struct CameraManager_t3272490737;
 // StageManager
 struct StageManager_t3296066545;
 // StageTextManager
@@ -1454,8 +1454,10 @@ public:
 	Text_t1901882714 * ___clearText_3;
 	// UnityEngine.UI.Text StageManager::overText
 	Text_t1901882714 * ___overText_4;
+	// CameraManager StageManager::cm
+	CameraManager_t3272490737 * ___cm_5;
 	// System.Int32 StageManager::blockNum
-	int32_t ___blockNum_6;
+	int32_t ___blockNum_7;
 
 public:
 	inline static int32_t get_offset_of_scoreText_2() { return static_cast<int32_t>(offsetof(StageManager_t3296066545, ___scoreText_2)); }
@@ -1485,12 +1487,21 @@ public:
 		Il2CppCodeGenWriteBarrier((&___overText_4), value);
 	}
 
-	inline static int32_t get_offset_of_blockNum_6() { return static_cast<int32_t>(offsetof(StageManager_t3296066545, ___blockNum_6)); }
-	inline int32_t get_blockNum_6() const { return ___blockNum_6; }
-	inline int32_t* get_address_of_blockNum_6() { return &___blockNum_6; }
-	inline void set_blockNum_6(int32_t value)
+	inline static int32_t get_offset_of_cm_5() { return static_cast<int32_t>(offsetof(StageManager_t3296066545, ___cm_5)); }
+	inline CameraManager_t3272490737 * get_cm_5() const { return ___cm_5; }
+	inline CameraManager_t3272490737 ** get_address_of_cm_5() { return &___cm_5; }
+	inline void set_cm_5(CameraManager_t3272490737 * value)
 	{
-		___blockNum_6 = value;
+		___cm_5 = value;
+		Il2CppCodeGenWriteBarrier((&___cm_5), value);
+	}
+
+	inline static int32_t get_offset_of_blockNum_7() { return static_cast<int32_t>(offsetof(StageManager_t3296066545, ___blockNum_7)); }
+	inline int32_t get_blockNum_7() const { return ___blockNum_7; }
+	inline int32_t* get_address_of_blockNum_7() { return &___blockNum_7; }
+	inline void set_blockNum_7(int32_t value)
+	{
+		___blockNum_7 = value;
 	}
 };
 
@@ -1498,15 +1509,15 @@ struct StageManager_t3296066545_StaticFields
 {
 public:
 	// System.Int32 StageManager::currentStage
-	int32_t ___currentStage_5;
+	int32_t ___currentStage_6;
 
 public:
-	inline static int32_t get_offset_of_currentStage_5() { return static_cast<int32_t>(offsetof(StageManager_t3296066545_StaticFields, ___currentStage_5)); }
-	inline int32_t get_currentStage_5() const { return ___currentStage_5; }
-	inline int32_t* get_address_of_currentStage_5() { return &___currentStage_5; }
-	inline void set_currentStage_5(int32_t value)
+	inline static int32_t get_offset_of_currentStage_6() { return static_cast<int32_t>(offsetof(StageManager_t3296066545_StaticFields, ___currentStage_6)); }
+	inline int32_t get_currentStage_6() const { return ___currentStage_6; }
+	inline int32_t* get_address_of_currentStage_6() { return &___currentStage_6; }
+	inline void set_currentStage_6(int32_t value)
 	{
-		___currentStage_5 = value;
+		___currentStage_6 = value;
 	}
 };
 
@@ -2078,12 +2089,14 @@ struct  PlayerController_t2064355688  : public MonoBehaviour_t3962482529
 public:
 	// GyroManager PlayerController::gm
 	GyroManager_t2156710008 * ___gm_2;
+	// CameraManager PlayerController::cm
+	CameraManager_t3272490737 * ___cm_3;
 	// System.Single PlayerController::turnSpeed
-	float ___turnSpeed_3;
+	float ___turnSpeed_4;
 	// UnityEngine.Quaternion PlayerController::firstDirection
-	Quaternion_t2301928331  ___firstDirection_4;
+	Quaternion_t2301928331  ___firstDirection_5;
 	// System.Boolean PlayerController::isDeath
-	bool ___isDeath_5;
+	bool ___isDeath_6;
 
 public:
 	inline static int32_t get_offset_of_gm_2() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___gm_2)); }
@@ -2095,28 +2108,37 @@ public:
 		Il2CppCodeGenWriteBarrier((&___gm_2), value);
 	}
 
-	inline static int32_t get_offset_of_turnSpeed_3() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___turnSpeed_3)); }
-	inline float get_turnSpeed_3() const { return ___turnSpeed_3; }
-	inline float* get_address_of_turnSpeed_3() { return &___turnSpeed_3; }
-	inline void set_turnSpeed_3(float value)
+	inline static int32_t get_offset_of_cm_3() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___cm_3)); }
+	inline CameraManager_t3272490737 * get_cm_3() const { return ___cm_3; }
+	inline CameraManager_t3272490737 ** get_address_of_cm_3() { return &___cm_3; }
+	inline void set_cm_3(CameraManager_t3272490737 * value)
 	{
-		___turnSpeed_3 = value;
+		___cm_3 = value;
+		Il2CppCodeGenWriteBarrier((&___cm_3), value);
 	}
 
-	inline static int32_t get_offset_of_firstDirection_4() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___firstDirection_4)); }
-	inline Quaternion_t2301928331  get_firstDirection_4() const { return ___firstDirection_4; }
-	inline Quaternion_t2301928331 * get_address_of_firstDirection_4() { return &___firstDirection_4; }
-	inline void set_firstDirection_4(Quaternion_t2301928331  value)
+	inline static int32_t get_offset_of_turnSpeed_4() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___turnSpeed_4)); }
+	inline float get_turnSpeed_4() const { return ___turnSpeed_4; }
+	inline float* get_address_of_turnSpeed_4() { return &___turnSpeed_4; }
+	inline void set_turnSpeed_4(float value)
 	{
-		___firstDirection_4 = value;
+		___turnSpeed_4 = value;
 	}
 
-	inline static int32_t get_offset_of_isDeath_5() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___isDeath_5)); }
-	inline bool get_isDeath_5() const { return ___isDeath_5; }
-	inline bool* get_address_of_isDeath_5() { return &___isDeath_5; }
-	inline void set_isDeath_5(bool value)
+	inline static int32_t get_offset_of_firstDirection_5() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___firstDirection_5)); }
+	inline Quaternion_t2301928331  get_firstDirection_5() const { return ___firstDirection_5; }
+	inline Quaternion_t2301928331 * get_address_of_firstDirection_5() { return &___firstDirection_5; }
+	inline void set_firstDirection_5(Quaternion_t2301928331  value)
 	{
-		___isDeath_5 = value;
+		___firstDirection_5 = value;
+	}
+
+	inline static int32_t get_offset_of_isDeath_6() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___isDeath_6)); }
+	inline bool get_isDeath_6() const { return ___isDeath_6; }
+	inline bool* get_address_of_isDeath_6() { return &___isDeath_6; }
+	inline void set_isDeath_6(bool value)
+	{
+		___isDeath_6 = value;
 	}
 };
 
@@ -2481,12 +2503,13 @@ extern const int32_t g_FieldOffsetTable1830[2] =
 	PlayerCamera_t1622178205::get_offset_of_firstDirection_3(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1831 = { sizeof (PlayerController_t2064355688), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1831[4] = 
+extern const int32_t g_FieldOffsetTable1831[5] = 
 {
 	PlayerController_t2064355688::get_offset_of_gm_2(),
-	PlayerController_t2064355688::get_offset_of_turnSpeed_3(),
-	PlayerController_t2064355688::get_offset_of_firstDirection_4(),
-	PlayerController_t2064355688::get_offset_of_isDeath_5(),
+	PlayerController_t2064355688::get_offset_of_cm_3(),
+	PlayerController_t2064355688::get_offset_of_turnSpeed_4(),
+	PlayerController_t2064355688::get_offset_of_firstDirection_5(),
+	PlayerController_t2064355688::get_offset_of_isDeath_6(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1832 = { sizeof (SceneController_t2849316448), -1, sizeof(SceneController_t2849316448_StaticFields), 0 };
 extern const int32_t g_FieldOffsetTable1832[1] = 
@@ -2508,13 +2531,14 @@ extern const int32_t g_FieldOffsetTable1834[2] =
 	SoundController_t2462365417::get_offset_of_soundSub1_3(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1835 = { sizeof (StageManager_t3296066545), -1, sizeof(StageManager_t3296066545_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1835[5] = 
+extern const int32_t g_FieldOffsetTable1835[6] = 
 {
 	StageManager_t3296066545::get_offset_of_scoreText_2(),
 	StageManager_t3296066545::get_offset_of_clearText_3(),
 	StageManager_t3296066545::get_offset_of_overText_4(),
-	StageManager_t3296066545_StaticFields::get_offset_of_currentStage_5(),
-	StageManager_t3296066545::get_offset_of_blockNum_6(),
+	StageManager_t3296066545::get_offset_of_cm_5(),
+	StageManager_t3296066545_StaticFields::get_offset_of_currentStage_6(),
+	StageManager_t3296066545::get_offset_of_blockNum_7(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1836 = { sizeof (StageTextManager_t1380114822), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable1836[3] = 

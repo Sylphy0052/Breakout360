@@ -7,6 +7,7 @@ public class StageManager : MonoBehaviour {
 	public Text scoreText;
 	public Text clearText;
 	public Text overText;
+	public CameraManager cm;
 
 	private static int currentStage = 1;
 	private int blockNum;
@@ -31,7 +32,7 @@ public class StageManager : MonoBehaviour {
 		if(blockNum == 0) {
 			clearText.gameObject.SetActive (true);
 		}
-		if (GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
+		if (cm.GetStatus() == CameraManager.CameraStatus.Playing & GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
 			overText.gameObject.SetActive (true);
 		}
 	}

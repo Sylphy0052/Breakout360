@@ -165,7 +165,7 @@ class ParticleRenderer;
 class ParticleSystemRenderer; 
 class SkinnedMeshRenderer; 
 class SpriteMask; 
-class SpriteRenderer; 
+class SpriteRenderer; template <> void RegisterClass<SpriteRenderer>();
 class TilemapRenderer; 
 class TrailRenderer; 
 class Rigidbody; template <> void RegisterClass<Rigidbody>();
@@ -272,7 +272,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 73 non stripped classes
+	//Total: 74 non stripped classes
 	//0. Rigidbody
 	RegisterClass<Rigidbody>();
 	//1. Unity::Component
@@ -389,35 +389,37 @@ RegisterBuiltinTypes();
 	RegisterClass<LevelGameManager>();
 	//57. LightmapSettings
 	RegisterClass<LightmapSettings>();
-	//58. Collider
+	//58. SpriteRenderer
+	RegisterClass<SpriteRenderer>();
+	//59. Collider
 	RegisterClass<Collider>();
-	//59. MeshCollider
+	//60. MeshCollider
 	RegisterClass<MeshCollider>();
-	//60. Light
+	//61. Light
 	RegisterClass<Light>();
-	//61. TextRendering::Font
+	//62. TextRendering::Font
 	RegisterClass<TextRendering::Font>();
-	//62. TextRenderingPrivate::TextMesh
+	//63. TextRenderingPrivate::TextMesh
 	RegisterClass<TextRenderingPrivate::TextMesh>();
-	//63. AudioListener
+	//64. AudioListener
 	RegisterClass<AudioListener>();
-	//64. AudioBehaviour
+	//65. AudioBehaviour
 	RegisterClass<AudioBehaviour>();
-	//65. BoxCollider
+	//66. BoxCollider
 	RegisterClass<BoxCollider>();
-	//66. UI::Canvas
+	//67. UI::Canvas
 	RegisterClass<UI::Canvas>();
-	//67. UI::CanvasRenderer
+	//68. UI::CanvasRenderer
 	RegisterClass<UI::CanvasRenderer>();
-	//68. CapsuleCollider
+	//69. CapsuleCollider
 	RegisterClass<CapsuleCollider>();
-	//69. AnimationClip
+	//70. AnimationClip
 	RegisterClass<AnimationClip>();
-	//70. Motion
+	//71. Motion
 	RegisterClass<Motion>();
-	//71. PhysicMaterial
+	//72. PhysicMaterial
 	RegisterClass<PhysicMaterial>();
-	//72. SphereCollider
+	//73. SphereCollider
 	RegisterClass<SphereCollider>();
 
 }

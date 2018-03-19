@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
 	private float turnSpeed = 3.0f;
 	private Quaternion firstDirection;
+	private bool isDeath = false;
 
 	void Start() {
 		firstDirection = transform.rotation;
@@ -34,5 +35,13 @@ public class PlayerController : MonoBehaviour {
 
 	public void turnLeft() {
 		this.transform.Rotate (new Vector3(0, -turnSpeed, 0));
+	}
+
+	public void Death() {
+		isDeath = true;
+	}
+
+	public bool checkDeath() {
+		return isDeath;
 	}
 }

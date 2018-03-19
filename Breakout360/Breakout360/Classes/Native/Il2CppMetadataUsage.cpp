@@ -4909,8 +4909,6 @@ String_t* _stringLiteral503068089;
 String_t* _stringLiteral1503155443;
 String_t* _stringLiteral2261822918;
 String_t* _stringLiteral424788472;
-String_t* _stringLiteral3568065263;
-String_t* _stringLiteral242398743;
 String_t* _stringLiteral3478956332;
 String_t* _stringLiteral302003725;
 String_t* _stringLiteral3105844272;
@@ -4947,7 +4945,7 @@ String_t* _stringLiteral1864861238;
 String_t* _stringLiteral3926843441;
 String_t* _stringLiteral1132744560;
 String_t* _stringLiteral46997234;
-extern void** const g_MetadataUsages[4929] = 
+extern void** const g_MetadataUsages[4927] = 
 {
 	(void**)(&Contraction_t1589275354_0_0_0_var),
 	(void**)(&Level2Map_t3640798870_0_0_0_var),
@@ -9840,8 +9838,6 @@ extern void** const g_MetadataUsages[4929] =
 	(void**)(&_stringLiteral1503155443),
 	(void**)(&_stringLiteral2261822918),
 	(void**)(&_stringLiteral424788472),
-	(void**)(&_stringLiteral3568065263),
-	(void**)(&_stringLiteral242398743),
 	(void**)(&_stringLiteral3478956332),
 	(void**)(&_stringLiteral302003725),
 	(void**)(&_stringLiteral3105844272),

@@ -16,6 +16,7 @@ public class CameraManager : MonoBehaviour {
 		First,
 		Moving,
 		Playing,
+		Finish,
 		End,
 	}
 
@@ -45,16 +46,21 @@ public class CameraManager : MonoBehaviour {
 	}
 
 	public void UpCamera() {
+		status = CameraStatus.Moving;
 		// カメラの視点をあわせる
 		mainCamera.transform.rotation = playerCamera.transform.rotation;
 		mainCamera.SetActive (true);
 		playerCamera.SetActive (false);
-//		mcm.PlayUpAnimation ();
+		mcm.PlayUpAnimation ();
 		isUp = true;
 	}
 
 	public CameraStatus GetStatus() {
 		return status;
+	}
+
+	public void SetStatus(CameraStatus setStatus) {
+		status = setStatus;
 	}
 
 }

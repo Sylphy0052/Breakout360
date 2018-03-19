@@ -33,5 +33,9 @@ public class BallManager : MonoBehaviour {
 		if(coll.gameObject.CompareTag("Block")) {
 			coll.gameObject.GetComponent<BlockController> ().Break ();
 		}
+		if(coll.gameObject.CompareTag("Player")) {
+			Destroy (this.gameObject);
+			coll.gameObject.GetComponent<PlayerController> ().Death ();
+		}
 	}
 }

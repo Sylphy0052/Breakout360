@@ -7,10 +7,8 @@ public class GyroManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (!Application.isEditor) {
-			Debug.Log ("Gyro On");
 			Input.gyro.enabled = true;
 		} else {
-			Debug.Log ("Gyro Off");
 			Input.gyro.enabled = false;
 		}
 	}

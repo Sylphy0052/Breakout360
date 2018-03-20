@@ -22074,6 +22074,11 @@ extern "C"  double Math_Cos_m1874044299 (RuntimeObject * __this /* static, unuse
 {
 	return cos(___d0);
 }
+// System.Double System.Math::Atan2(System.Double,System.Double)
+extern "C"  double Math_Atan2_m182059315 (RuntimeObject * __this /* static, unused */, double ___y0, double ___x1, const RuntimeMethod* method)
+{
+	return atan2(___y0, ___x1);
+}
 // System.Double System.Math::Log(System.Double)
 extern "C"  double Math_Log_m2526073084 (RuntimeObject * __this /* static, unused */, double ___d0, const RuntimeMethod* method)
 {

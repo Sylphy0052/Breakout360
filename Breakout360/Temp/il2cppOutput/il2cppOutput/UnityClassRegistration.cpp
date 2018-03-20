@@ -431,19 +431,19 @@ RegisterBuiltinTypes();
 	RegisterClass<SpriteRenderer>();
 	//75. MeshCollider
 	RegisterClass<MeshCollider>();
-	//76. TextRenderingPrivate::TextMesh
-	RegisterClass<TextRenderingPrivate::TextMesh>();
-	//77. BoxCollider
-	RegisterClass<BoxCollider>();
-	//78. CapsuleCollider
-	RegisterClass<CapsuleCollider>();
-	//79. AnimationClip
-	RegisterClass<AnimationClip>();
-	//80. Motion
-	RegisterClass<Motion>();
-	//81. PhysicMaterial
-	RegisterClass<PhysicMaterial>();
-	//82. ParticleSystemRenderer
+	//76. ParticleSystemRenderer
 	RegisterClass<ParticleSystemRenderer>();
+	//77. TextRenderingPrivate::TextMesh
+	RegisterClass<TextRenderingPrivate::TextMesh>();
+	//78. BoxCollider
+	RegisterClass<BoxCollider>();
+	//79. CapsuleCollider
+	RegisterClass<CapsuleCollider>();
+	//80. AnimationClip
+	RegisterClass<AnimationClip>();
+	//81. Motion
+	RegisterClass<Motion>();
+	//82. PhysicMaterial
+	RegisterClass<PhysicMaterial>();
 
 }

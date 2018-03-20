@@ -2,9 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StageManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="52" Column="6" />
-      <File FileName="Assets/Scripts/StageManager.cs" Line="19" Column="3" NotebookId="1" />
-      <File FileName="Assets/Scripts/CameraManager.cs" Line="35" Column="61" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="80" Column="12" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="43" Column="3" />
+      <File FileName="Assets/Scripts/StageManager.cs" Line="13" Column="23" NotebookId="1" />
+      <File FileName="Assets/Scripts/BlockController.cs" Line="9" Column="65" NotebookId="1" />
+      <File FileName="Assets/Scripts/BallManager.cs" Line="34" Column="62" NotebookId="1" />
+      <File FileName="Assets/Scripts/BarManager.cs" Line="9" Column="22" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -6,12 +6,14 @@ public class PlayerController : MonoBehaviour {
 	public GyroManager gm;
 	public CameraManager cm;
 
-	private float turnSpeed = 3.0f;
+	private float turnSpeed = 4.0f;
 	private Quaternion firstDirection;
+	private Vector3 beforeVector;
 	private bool isDeath = false;
 
 	void Start() {
 		firstDirection = transform.rotation;
+		beforeVector = transform.rotation.eulerAngles;
 	}
 
 	void Update() {
@@ -27,7 +29,8 @@ public class PlayerController : MonoBehaviour {
 
 	private void SetGyroDirection() {
 		Quaternion gyroDirection = gm.GetGyro ();
-		this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, firstDirection.z, gyroDirection.w);
+//		this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, firstDirection.z, gyroDirection.w);
+		this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, gyroDirection.z, gyroDirection.w);
 	}
 
 	public void turnRight() {

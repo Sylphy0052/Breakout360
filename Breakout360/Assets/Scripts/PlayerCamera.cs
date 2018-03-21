@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour {
-	public GameObject player;
+//	public GameObject player;
 
+	private GameObject player;
 	private Quaternion firstDirection;
 
 	void Start() {
 		firstDirection = this.transform.rotation;
 //		this.gameObject.GetComponent<SoundController> ().PlaySound ();
+//		GetPlayerObject();
 	}
 
 	void Update () {
 		SetDirection ();
+	}
+
+	public void GetPlayerObject(GameObject playerArg) {
+//		player = GameObject.FindGameObjectWithTag ("Player");
+		player = playerArg;
+//		Debug.Log (player);
 	}
 
 	private Quaternion GetDirection() {

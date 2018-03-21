@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class StageTextManager : MonoBehaviour {
-	public GameObject stageText;
+//	public GameObject stageText;
 	public GameObject clearText;
 	public GameObject overText;
 
 	void Start () {
-		stageText.SetActive (true);
+//		stageText.SetActive (true);
 		clearText.SetActive (false);
 		overText.SetActive (false);
 	}
@@ -20,6 +20,11 @@ public class StageTextManager : MonoBehaviour {
 
 	public void ShowOver() {
 		overText.SetActive (true);
+	}
+
+	public void NextStageLabel() {
+		clearText.SetActive (false);
+		overText.SetActive (false);
 	}
 
 }

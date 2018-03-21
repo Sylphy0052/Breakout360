@@ -17,6 +17,10 @@ public class MainCameraManager : MonoBehaviour {
 		anim.Play ("UpCamera");
 	}
 
+	public void PlayNextStage() {
+		anim.Play ("NextStageCamera");
+	}
+
 	public bool isFinished() {
 		return !anim.isPlaying;
 	}

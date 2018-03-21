@@ -14,11 +14,17 @@ public class StageManager : MonoBehaviour {
 
 	private static int currentStage = 1;
 	private int blockNum;
+	private string stageName = "Stage1Objects";
+	private GameObject stageObjects;
+	private GameObject currentObjects;
 
 
 	void Start() {
+		stageObjects = GameObject.Find ("StageObjects");
 		clearText.SetActive (false);
 		overText.SetActive (false);
+		currentObjects = stageObjects.transform.FindChild (stageName).gameObject;
+		currentObjects.SetActive (true);
 	}
 
 	void Update() {
@@ -26,7 +32,14 @@ public class StageManager : MonoBehaviour {
 	}
 
 	public void NextStage() {
+		currentObjects.SetActive (false);
 		currentStage++;
+		stageName = "Stage" + currentStage + "Objects";
+		currentObjects = stageObjects.transform.FindChild (stageName).gameObject;
+		currentObjects.SetActive (true);
+		clearText.SetActive (false);
+		overText.SetActive (false);
+
 	}
 
 	private void CheckBlockNum() {
@@ -42,5 +55,7 @@ public class StageManager : MonoBehaviour {
 
 	public bool isFinish() {
 		return blockNum == 0;
+//		return blockNum >= 0;
+//		return blockNum <= 5;
 	}
 }

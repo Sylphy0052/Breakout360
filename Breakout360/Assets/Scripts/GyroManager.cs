@@ -11,6 +11,7 @@ public class GyroManager : MonoBehaviour {
 		} else {
 			Input.gyro.enabled = false;
 		}
+//		Input.gyro.enabled = true;
 	}
 
 	public Quaternion GetGyro() {

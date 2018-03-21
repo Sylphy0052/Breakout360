@@ -108,7 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5ebd099cca9445b9ba72a5f23e5268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 62693df23f47540a1822abd65afe69c8, type: 3}
+  sound: {fileID: 8300000, guid: ff2f3c9caa4fc438d8fdfdc155ee196a, type: 3}
+  soundSub1: {fileID: 0}
 --- !u!114 &114555830823657440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,3 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70080c2bf0a5402faa174db10317382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakEffect: {fileID: 1872250036765040, guid: 642a1d49a385e4d5ab9c22b52152bda9,
+    type: 2}

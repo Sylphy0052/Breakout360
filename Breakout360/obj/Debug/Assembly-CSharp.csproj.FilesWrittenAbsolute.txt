@@ -47,3 +47,5 @@
 /Users/pyente/Github/Breakout360/Breakout360/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
 /Users/pyente/Github/Breakout360/Breakout360/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll
 /Users/pyente/Github/Breakout360/Breakout360/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll.mdb
+/Users/pyente/Github/Breakout360/Breakout360/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/pyente/Github/Breakout360/Breakout360/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb

@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BallManager : MonoBehaviour {
-	public GameObject player;
 
+//	private GameObject player;
 	private BallController bc;
-
 	private bool isFire;
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player");
+//		player = GameObject.FindGameObjectWithTag ("Player");
 		bc = GetComponent<BallController> ();
 		isFire = false;
 	}
 
 	private Vector3 GetPlayerDirection() {
-		return player.transform.forward;
+		return GameObject.FindGameObjectWithTag ("Player").transform.forward;
 	}
 
 	public void Fire() {
@@ -37,5 +36,11 @@ public class BallManager : MonoBehaviour {
 			Destroy (this.gameObject);
 			coll.gameObject.GetComponent<PlayerController> ().Death ();
 		}
+	}
+
+	public void init() {
+//		this.transform.parent = player.transform;
+//		player = GameObject.FindGameObjectWithTag ("Player");
+		bc = GetComponent<BallController> ();
 	}
 }

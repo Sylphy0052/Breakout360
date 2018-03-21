@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour {
 
 	private void SetGyroDirection() {
 		Quaternion gyroDirection = gm.GetGyro ();
-//		this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, firstDirection.z, gyroDirection.w);
-		this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, gyroDirection.z, gyroDirection.w);
+		this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, firstDirection.z, gyroDirection.w);
+//		this.transform.rotation = new Quaternion(firstDirection.x, gyroDirection.y, gyroDirection.z, gyroDirection.w);
 	}
 
 	public void turnRight() {

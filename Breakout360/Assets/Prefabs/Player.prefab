@@ -398,8 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f11ce9bb901745c9b17f36632b74620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  cm: {fileID: 0}
+  gm: {fileID: 114050054224441224, guid: 5187aecb520684a1699acf6ed300c684, type: 2}
+  cm: {fileID: 114895052778615202, guid: 5b8d12dc7573c4c06badeb3a8cf34c2a, type: 2}
 --- !u!114 &114277840227193996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -422,7 +422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5533a0bdae98249b0b7ffed94525b6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!114 &114844587160072058
 MonoBehaviour:
   m_ObjectHideFlags: 1

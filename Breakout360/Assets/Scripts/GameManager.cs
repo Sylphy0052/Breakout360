@@ -78,12 +78,14 @@ public class GameManager : MonoBehaviour {
 				if(sm.isFinish()) {
 					cm.SetStatus (CameraManager.CameraStatus.Finish);
 					status = GameStatus.Clear;
+					sm.GameClear ();
 					audioSource.clip = clearSound;
 					audioSource.Play ();
 				}
 				if(pc.checkDeath()) {
 					cm.SetStatus (CameraManager.CameraStatus.Finish);
 					status = GameStatus.Over;
+					sm.GameOver ();
 					audioSource.clip = overSound;
 					audioSource.Play ();
 				}
@@ -107,10 +109,15 @@ public class GameManager : MonoBehaviour {
 				if (im.CheckTouch ()) {
 					audioSource.clip = touchSound;
 					audioSource.Play ();
-					cm.NextStage ();
-					Invoke("NextStageDelay", 1.5f);
-//					NextStageDelay ();
-
+					switch(status) {
+					case GameStatus.Clear:
+						cm.NextStage ();
+						Invoke ("NextStageDelay", 1.5f);
+						break;
+					case GameStatus.Over:
+						sc.LoadTitle ();
+						break;
+					}
 				}
 				break;
 			}

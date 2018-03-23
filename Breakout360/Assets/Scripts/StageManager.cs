@@ -42,15 +42,17 @@ public class StageManager : MonoBehaviour {
 
 	}
 
+	public void GameOver() {
+		overText.SetActive (true);
+	}
+
+	public void GameClear() {
+		clearText.SetActive (true);
+	}
+
 	private void CheckBlockNum() {
 		blockNum = GameObject.FindGameObjectsWithTag ("Block").Length;
 		scoreText.text = "Left:" + blockNum;
-		if(blockNum == 0) {
-			clearText.SetActive (true);
-		}
-		if (cm.GetStatus() == CameraManager.CameraStatus.Playing & GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
-			overText.SetActive (true);
-		}
 	}
 
 	public bool isFinish() {

@@ -31,4 +31,9 @@ public class SceneController : MonoBehaviour {
 		SceneManager.LoadScene("GameScene");
 		currentStatus = GameStatus.Game;
 	}
+
+	public void LoadTitle() {
+		SceneManager.LoadScene("Title");
+		currentStatus = GameStatus.Title;
+	}
 }

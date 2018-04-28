@@ -197,6 +197,8 @@ extern const uint32_t SceneController_GetStatus_m4010357723_MetadataUsageId;
 extern const uint32_t SceneController_SetStatus_m3328661133_MetadataUsageId;
 extern String_t* _stringLiteral3105844272;
 extern const uint32_t SceneController_LoadGame_m2594758407_MetadataUsageId;
+extern String_t* _stringLiteral3963994475;
+extern const uint32_t SceneController_LoadTitle_m433975523_MetadataUsageId;
 extern const uint32_t SceneController__cctor_m2985119817_MetadataUsageId;
 extern String_t* _stringLiteral1107385060;
 extern const uint32_t StageManager__ctor_m3331623394_MetadataUsageId;
@@ -3361,8 +3363,12 @@ extern "C"  void BallManager_Fire_m3244531822 (BallManager_t2004465268 * __this,
 extern "C"  bool StageManager_isFinish_m2487550001 (StageManager_t3296066545 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void CameraManager::SetStatus(CameraManager/CameraStatus)
 extern "C"  void CameraManager_SetStatus_m2778707669 (CameraManager_t3272490737 * __this, int32_t ___setStatus0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Void StageManager::GameClear()
+extern "C"  void StageManager_GameClear_m1079211354 (StageManager_t3296066545 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Boolean PlayerController::checkDeath()
 extern "C"  bool PlayerController_checkDeath_m889537932 (PlayerController_t2064355688 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Void StageManager::GameOver()
+extern "C"  void StageManager_GameOver_m4159581688 (StageManager_t3296066545 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void CameraManager::UpCamera()
 extern "C"  void CameraManager_UpCamera_m633613341 (CameraManager_t3272490737 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void StageTextManager::ShowClear()
@@ -3373,6 +3379,8 @@ extern "C"  void StageTextManager_ShowOver_m1091829582 (StageTextManager_t138011
 extern "C"  void CameraManager_NextStage_m3844654255 (CameraManager_t3272490737 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.MonoBehaviour::Invoke(System.String,System.Single)
 extern "C"  void MonoBehaviour_Invoke_m4227543964 (MonoBehaviour_t3962482529 * __this, String_t* p0, float p1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Void SceneController::LoadTitle()
+extern "C"  void SceneController_LoadTitle_m433975523 (SceneController_t2849316448 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void StageManager::NextStage()
 extern "C"  void StageManager_NextStage_m2693353284 (StageManager_t3296066545 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void StageTextManager::NextStageLabel()
@@ -4317,6 +4325,7 @@ extern "C"  void GameManager_ActionByScene_m107967549 (GameManager_t1536523654 *
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	int32_t V_3 = 0;
+	int32_t V_4 = 0;
 	{
 		// switch(sc.GetStatus()) {
 		SceneController_t2849316448 * L_0 = __this->get_sc_2();
@@ -4342,11 +4351,11 @@ extern "C"  void GameManager_ActionByScene_m107967549 (GameManager_t1536523654 *
 		int32_t L_4 = V_0;
 		if ((((int32_t)L_4) == ((int32_t)2)))
 		{
-			goto IL_0275;
+			goto IL_02bc;
 		}
 	}
 	{
-		goto IL_027a;
+		goto IL_02c1;
 	}
 
 IL_0026:
@@ -4386,7 +4395,7 @@ IL_0026:
 IL_0065:
 	{
 		// break;
-		goto IL_027a;
+		goto IL_02c1;
 	}
 
 IL_006a:
@@ -4447,7 +4456,7 @@ IL_009e:
 			}
 			case 1:
 			{
-				goto IL_0270;
+				goto IL_02b7;
 			}
 			case 2:
 			{
@@ -4455,16 +4464,16 @@ IL_009e:
 			}
 			case 3:
 			{
-				goto IL_01ab;
+				goto IL_01c1;
 			}
 			case 4:
 			{
-				goto IL_01e9;
+				goto IL_01ff;
 			}
 		}
 	}
 	{
-		goto IL_0270;
+		goto IL_02b7;
 	}
 
 IL_00c9:
@@ -4501,7 +4510,7 @@ IL_00c9:
 IL_0102:
 	{
 		// break;
-		goto IL_0270;
+		goto IL_02b7;
 	}
 
 IL_0107:
@@ -4533,7 +4542,7 @@ IL_0124:
 		bool L_30 = StageManager_isFinish_m2487550001(L_29, /*hidden argument*/NULL);
 		if (!L_30)
 		{
-			goto IL_0165;
+			goto IL_0170;
 		}
 	}
 	{
@@ -4544,193 +4553,243 @@ IL_0124:
 		CameraManager_SetStatus_m2778707669(L_31, 3, /*hidden argument*/NULL);
 		// status = GameStatus.Clear;
 		__this->set_status_15(0);
-		// audioSource.clip = clearSound;
-		AudioSource_t3935305588 * L_32 = __this->get_audioSource_11();
-		AudioClip_t3680889665 * L_33 = __this->get_clearSound_7();
-		// audioSource.clip = clearSound;
+		// sm.GameClear ();
+		StageManager_t3296066545 * L_32 = __this->get_sm_5();
+		// sm.GameClear ();
 		NullCheck(L_32);
-		AudioSource_set_clip_m31653938(L_32, L_33, /*hidden argument*/NULL);
+		StageManager_GameClear_m1079211354(L_32, /*hidden argument*/NULL);
+		// audioSource.clip = clearSound;
+		AudioSource_t3935305588 * L_33 = __this->get_audioSource_11();
+		AudioClip_t3680889665 * L_34 = __this->get_clearSound_7();
+		// audioSource.clip = clearSound;
+		NullCheck(L_33);
+		AudioSource_set_clip_m31653938(L_33, L_34, /*hidden argument*/NULL);
 		// audioSource.Play ();
-		AudioSource_t3935305588 * L_34 = __this->get_audioSource_11();
+		AudioSource_t3935305588 * L_35 = __this->get_audioSource_11();
 		// audioSource.Play ();
-		NullCheck(L_34);
-		AudioSource_Play_m48294159(L_34, /*hidden argument*/NULL);
+		NullCheck(L_35);
+		AudioSource_Play_m48294159(L_35, /*hidden argument*/NULL);
 	}
 
-IL_0165:
+IL_0170:
 	{
 		// if(pc.checkDeath()) {
-		PlayerController_t2064355688 * L_35 = __this->get_pc_12();
+		PlayerController_t2064355688 * L_36 = __this->get_pc_12();
 		// if(pc.checkDeath()) {
-		NullCheck(L_35);
-		bool L_36 = PlayerController_checkDeath_m889537932(L_35, /*hidden argument*/NULL);
-		if (!L_36)
+		NullCheck(L_36);
+		bool L_37 = PlayerController_checkDeath_m889537932(L_36, /*hidden argument*/NULL);
+		if (!L_37)
 		{
-			goto IL_01a6;
+			goto IL_01bc;
 		}
 	}
 	{
 		// cm.SetStatus (CameraManager.CameraStatus.Finish);
-		CameraManager_t3272490737 * L_37 = __this->get_cm_4();
+		CameraManager_t3272490737 * L_38 = __this->get_cm_4();
 		// cm.SetStatus (CameraManager.CameraStatus.Finish);
-		NullCheck(L_37);
-		CameraManager_SetStatus_m2778707669(L_37, 3, /*hidden argument*/NULL);
+		NullCheck(L_38);
+		CameraManager_SetStatus_m2778707669(L_38, 3, /*hidden argument*/NULL);
 		// status = GameStatus.Over;
 		__this->set_status_15(1);
+		// sm.GameOver ();
+		StageManager_t3296066545 * L_39 = __this->get_sm_5();
+		// sm.GameOver ();
+		NullCheck(L_39);
+		StageManager_GameOver_m4159581688(L_39, /*hidden argument*/NULL);
 		// audioSource.clip = overSound;
-		AudioSource_t3935305588 * L_38 = __this->get_audioSource_11();
-		AudioClip_t3680889665 * L_39 = __this->get_overSound_8();
-		// audioSource.clip = overSound;
-		NullCheck(L_38);
-		AudioSource_set_clip_m31653938(L_38, L_39, /*hidden argument*/NULL);
-		// audioSource.Play ();
 		AudioSource_t3935305588 * L_40 = __this->get_audioSource_11();
-		// audioSource.Play ();
+		AudioClip_t3680889665 * L_41 = __this->get_overSound_8();
+		// audioSource.clip = overSound;
 		NullCheck(L_40);
-		AudioSource_Play_m48294159(L_40, /*hidden argument*/NULL);
+		AudioSource_set_clip_m31653938(L_40, L_41, /*hidden argument*/NULL);
+		// audioSource.Play ();
+		AudioSource_t3935305588 * L_42 = __this->get_audioSource_11();
+		// audioSource.Play ();
+		NullCheck(L_42);
+		AudioSource_Play_m48294159(L_42, /*hidden argument*/NULL);
 	}
 
-IL_01a6:
+IL_01bc:
 	{
 		// break;
-		goto IL_0270;
+		goto IL_02b7;
 	}
 
-IL_01ab:
+IL_01c1:
 	{
 		// if (im.CheckTouch ()) {
-		InputManager_t2926777569 * L_41 = __this->get_im_3();
+		InputManager_t2926777569 * L_43 = __this->get_im_3();
 		// if (im.CheckTouch ()) {
-		NullCheck(L_41);
-		bool L_42 = InputManager_CheckTouch_m1272290747(L_41, /*hidden argument*/NULL);
-		if (!L_42)
-		{
-			goto IL_01e4;
-		}
-	}
-	{
-		// cm.UpCamera ();
-		CameraManager_t3272490737 * L_43 = __this->get_cm_4();
-		// cm.UpCamera ();
 		NullCheck(L_43);
-		CameraManager_UpCamera_m633613341(L_43, /*hidden argument*/NULL);
+		bool L_44 = InputManager_CheckTouch_m1272290747(L_43, /*hidden argument*/NULL);
+		if (!L_44)
+		{
+			goto IL_01fa;
+		}
+	}
+	{
+		// cm.UpCamera ();
+		CameraManager_t3272490737 * L_45 = __this->get_cm_4();
+		// cm.UpCamera ();
+		NullCheck(L_45);
+		CameraManager_UpCamera_m633613341(L_45, /*hidden argument*/NULL);
 		// audioSource.clip = touchSound;
-		AudioSource_t3935305588 * L_44 = __this->get_audioSource_11();
-		AudioClip_t3680889665 * L_45 = __this->get_touchSound_9();
-		// audioSource.clip = touchSound;
-		NullCheck(L_44);
-		AudioSource_set_clip_m31653938(L_44, L_45, /*hidden argument*/NULL);
-		// audioSource.Play ();
 		AudioSource_t3935305588 * L_46 = __this->get_audioSource_11();
-		// audioSource.Play ();
+		AudioClip_t3680889665 * L_47 = __this->get_touchSound_9();
+		// audioSource.clip = touchSound;
 		NullCheck(L_46);
-		AudioSource_Play_m48294159(L_46, /*hidden argument*/NULL);
+		AudioSource_set_clip_m31653938(L_46, L_47, /*hidden argument*/NULL);
+		// audioSource.Play ();
+		AudioSource_t3935305588 * L_48 = __this->get_audioSource_11();
+		// audioSource.Play ();
+		NullCheck(L_48);
+		AudioSource_Play_m48294159(L_48, /*hidden argument*/NULL);
 	}
 
-IL_01e4:
+IL_01fa:
 	{
 		// break;
-		goto IL_0270;
+		goto IL_02b7;
 	}
 
-IL_01e9:
+IL_01ff:
 	{
 		// switch(status) {
-		int32_t L_47 = __this->get_status_15();
-		V_3 = L_47;
+		int32_t L_49 = __this->get_status_15();
+		V_3 = L_49;
 		// switch(status) {
-		int32_t L_48 = V_3;
-		if (!L_48)
+		int32_t L_50 = V_3;
+		if (!L_50)
 		{
-			goto IL_0202;
+			goto IL_0218;
 		}
 	}
 	{
-		int32_t L_49 = V_3;
-		if ((((int32_t)L_49) == ((int32_t)1)))
+		int32_t L_51 = V_3;
+		if ((((int32_t)L_51) == ((int32_t)1)))
 		{
-			goto IL_0212;
+			goto IL_0228;
 		}
 	}
 	{
-		goto IL_0222;
+		goto IL_0238;
 	}
 
-IL_0202:
+IL_0218:
 	{
 		// stm.ShowClear ();
-		StageTextManager_t1380114822 * L_50 = __this->get_stm_6();
+		StageTextManager_t1380114822 * L_52 = __this->get_stm_6();
 		// stm.ShowClear ();
-		NullCheck(L_50);
-		StageTextManager_ShowClear_m337854032(L_50, /*hidden argument*/NULL);
-		// break;
-		goto IL_0222;
-	}
-
-IL_0212:
-	{
-		// stm.ShowOver ();
-		StageTextManager_t1380114822 * L_51 = __this->get_stm_6();
-		// stm.ShowOver ();
-		NullCheck(L_51);
-		StageTextManager_ShowOver_m1091829582(L_51, /*hidden argument*/NULL);
-		// break;
-		goto IL_0222;
-	}
-
-IL_0222:
-	{
-		// if (im.CheckTouch ()) {
-		InputManager_t2926777569 * L_52 = __this->get_im_3();
-		// if (im.CheckTouch ()) {
 		NullCheck(L_52);
-		bool L_53 = InputManager_CheckTouch_m1272290747(L_52, /*hidden argument*/NULL);
-		if (!L_53)
+		StageTextManager_ShowClear_m337854032(L_52, /*hidden argument*/NULL);
+		// break;
+		goto IL_0238;
+	}
+
+IL_0228:
+	{
+		// stm.ShowOver ();
+		StageTextManager_t1380114822 * L_53 = __this->get_stm_6();
+		// stm.ShowOver ();
+		NullCheck(L_53);
+		StageTextManager_ShowOver_m1091829582(L_53, /*hidden argument*/NULL);
+		// break;
+		goto IL_0238;
+	}
+
+IL_0238:
+	{
+		// if (im.CheckTouch ()) {
+		InputManager_t2926777569 * L_54 = __this->get_im_3();
+		// if (im.CheckTouch ()) {
+		NullCheck(L_54);
+		bool L_55 = InputManager_CheckTouch_m1272290747(L_54, /*hidden argument*/NULL);
+		if (!L_55)
 		{
-			goto IL_026b;
+			goto IL_02b2;
 		}
 	}
 	{
 		// audioSource.clip = touchSound;
-		AudioSource_t3935305588 * L_54 = __this->get_audioSource_11();
-		AudioClip_t3680889665 * L_55 = __this->get_touchSound_9();
-		// audioSource.clip = touchSound;
-		NullCheck(L_54);
-		AudioSource_set_clip_m31653938(L_54, L_55, /*hidden argument*/NULL);
-		// audioSource.Play ();
 		AudioSource_t3935305588 * L_56 = __this->get_audioSource_11();
-		// audioSource.Play ();
+		AudioClip_t3680889665 * L_57 = __this->get_touchSound_9();
+		// audioSource.clip = touchSound;
 		NullCheck(L_56);
-		AudioSource_Play_m48294159(L_56, /*hidden argument*/NULL);
+		AudioSource_set_clip_m31653938(L_56, L_57, /*hidden argument*/NULL);
+		// audioSource.Play ();
+		AudioSource_t3935305588 * L_58 = __this->get_audioSource_11();
+		// audioSource.Play ();
+		NullCheck(L_58);
+		AudioSource_Play_m48294159(L_58, /*hidden argument*/NULL);
+		// switch(status) {
+		int32_t L_59 = __this->get_status_15();
+		V_4 = L_59;
+		// switch(status) {
+		int32_t L_60 = V_4;
+		if (!L_60)
+		{
+			goto IL_0281;
+		}
+	}
+	{
+		int32_t L_61 = V_4;
+		if ((((int32_t)L_61) == ((int32_t)1)))
+		{
+			goto IL_02a1;
+		}
+	}
+	{
+		goto IL_02b1;
+	}
+
+IL_0281:
+	{
 		// cm.NextStage ();
-		CameraManager_t3272490737 * L_57 = __this->get_cm_4();
+		CameraManager_t3272490737 * L_62 = __this->get_cm_4();
 		// cm.NextStage ();
-		NullCheck(L_57);
-		CameraManager_NextStage_m3844654255(L_57, /*hidden argument*/NULL);
-		// Invoke("NextStageDelay", 1.5f);
-		// Invoke("NextStageDelay", 1.5f);
+		NullCheck(L_62);
+		CameraManager_NextStage_m3844654255(L_62, /*hidden argument*/NULL);
+		// Invoke ("NextStageDelay", 1.5f);
+		// Invoke ("NextStageDelay", 1.5f);
 		MonoBehaviour_Invoke_m4227543964(__this, _stringLiteral2707980101, (1.5f), /*hidden argument*/NULL);
+		// break;
+		goto IL_02b1;
 	}
 
-IL_026b:
+IL_02a1:
+	{
+		// sc.LoadTitle ();
+		SceneController_t2849316448 * L_63 = __this->get_sc_2();
+		// sc.LoadTitle ();
+		NullCheck(L_63);
+		SceneController_LoadTitle_m433975523(L_63, /*hidden argument*/NULL);
+		// break;
+		goto IL_02b1;
+	}
+
+IL_02b1:
+	{
+	}
+
+IL_02b2:
 	{
 		// break;
-		goto IL_0270;
+		goto IL_02b7;
 	}
 
-IL_0270:
+IL_02b7:
 	{
 		// break;
-		goto IL_027a;
+		goto IL_02c1;
 	}
 
-IL_0275:
+IL_02bc:
 	{
 		// break;
-		goto IL_027a;
+		goto IL_02c1;
 	}
 
-IL_027a:
+IL_02c1:
 	{
 		// }
 		return;
@@ -5673,6 +5732,26 @@ extern "C"  void SceneController_LoadGame_m2594758407 (SceneController_t28493164
 		return;
 	}
 }
+// System.Void SceneController::LoadTitle()
+extern "C"  void SceneController_LoadTitle_m433975523 (SceneController_t2849316448 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SceneController_LoadTitle_m433975523_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// SceneManager.LoadScene("Title");
+		// SceneManager.LoadScene("Title");
+		SceneManager_LoadScene_m1758133949(NULL /*static, unused*/, _stringLiteral3963994475, /*hidden argument*/NULL);
+		// currentStatus = GameStatus.Title;
+		IL2CPP_RUNTIME_CLASS_INIT(SceneController_t2849316448_il2cpp_TypeInfo_var);
+		((SceneController_t2849316448_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_t2849316448_il2cpp_TypeInfo_var))->set_currentStatus_2(0);
+		// }
+		return;
+	}
+}
 // System.Void SceneController::.cctor()
 extern "C"  void SceneController__cctor_m2985119817 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -5885,6 +5964,32 @@ extern "C"  void StageManager_NextStage_m2693353284 (StageManager_t3296066545 * 
 		return;
 	}
 }
+// System.Void StageManager::GameOver()
+extern "C"  void StageManager_GameOver_m4159581688 (StageManager_t3296066545 * __this, const RuntimeMethod* method)
+{
+	{
+		// overText.SetActive (true);
+		GameObject_t1113636619 * L_0 = __this->get_overText_4();
+		// overText.SetActive (true);
+		NullCheck(L_0);
+		GameObject_SetActive_m796801857(L_0, (bool)1, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void StageManager::GameClear()
+extern "C"  void StageManager_GameClear_m1079211354 (StageManager_t3296066545 * __this, const RuntimeMethod* method)
+{
+	{
+		// clearText.SetActive (true);
+		GameObject_t1113636619 * L_0 = __this->get_clearText_3();
+		// clearText.SetActive (true);
+		NullCheck(L_0);
+		GameObject_SetActive_m796801857(L_0, (bool)1, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
 // System.Void StageManager::CheckBlockNum()
 extern "C"  void StageManager_CheckBlockNum_m2173459418 (StageManager_t3296066545 * __this, const RuntimeMethod* method)
 {
@@ -5910,46 +6015,6 @@ extern "C"  void StageManager_CheckBlockNum_m2173459418 (StageManager_t329606654
 		// scoreText.text = "Left:" + blockNum;
 		NullCheck(L_1);
 		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, L_5);
-		// if(blockNum == 0) {
-		int32_t L_6 = __this->get_blockNum_7();
-		if (L_6)
-		{
-			goto IL_004c;
-		}
-	}
-	{
-		// clearText.SetActive (true);
-		GameObject_t1113636619 * L_7 = __this->get_clearText_3();
-		// clearText.SetActive (true);
-		NullCheck(L_7);
-		GameObject_SetActive_m796801857(L_7, (bool)1, /*hidden argument*/NULL);
-	}
-
-IL_004c:
-	{
-		// if (cm.GetStatus() == CameraManager.CameraStatus.Playing & GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
-		CameraManager_t3272490737 * L_8 = __this->get_cm_5();
-		// if (cm.GetStatus() == CameraManager.CameraStatus.Playing & GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
-		NullCheck(L_8);
-		int32_t L_9 = CameraManager_GetStatus_m3786155143(L_8, /*hidden argument*/NULL);
-		// if (cm.GetStatus() == CameraManager.CameraStatus.Playing & GameObject.FindGameObjectsWithTag ("Ball").Length == 0) {
-		GameObjectU5BU5D_t3328599146* L_10 = GameObject_FindGameObjectsWithTag_m2585173894(NULL /*static, unused*/, _stringLiteral1201842172, /*hidden argument*/NULL);
-		NullCheck(L_10);
-		if (!((int32_t)((int32_t)((((int32_t)L_9) == ((int32_t)2))? 1 : 0)&(int32_t)((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_10)->max_length))))) == ((int32_t)0))? 1 : 0))))
-		{
-			goto IL_007d;
-		}
-	}
-	{
-		// overText.SetActive (true);
-		GameObject_t1113636619 * L_11 = __this->get_overText_4();
-		// overText.SetActive (true);
-		NullCheck(L_11);
-		GameObject_SetActive_m796801857(L_11, (bool)1, /*hidden argument*/NULL);
-	}
-
-IL_007d:
-	{
 		// }
 		return;
 	}

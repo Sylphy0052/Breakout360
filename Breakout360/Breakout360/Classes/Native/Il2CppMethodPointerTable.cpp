@@ -10762,6 +10762,7 @@ extern "C" void SceneController_NextScene_m2948675565 ();
 extern "C" void SceneController_GetStatus_m4010357723 ();
 extern "C" void SceneController_SetStatus_m3328661133 ();
 extern "C" void SceneController_LoadGame_m2594758407 ();
+extern "C" void SceneController_LoadTitle_m433975523 ();
 extern "C" void SceneController__cctor_m2985119817 ();
 extern "C" void SoundController__ctor_m919190390 ();
 extern "C" void SoundController_PlaySound_m4128028087 ();
@@ -10770,6 +10771,8 @@ extern "C" void StageManager__ctor_m3331623394 ();
 extern "C" void StageManager_Start_m2166152772 ();
 extern "C" void StageManager_Update_m448967036 ();
 extern "C" void StageManager_NextStage_m2693353284 ();
+extern "C" void StageManager_GameOver_m4159581688 ();
+extern "C" void StageManager_GameClear_m1079211354 ();
 extern "C" void StageManager_CheckBlockNum_m2173459418 ();
 extern "C" void StageManager_isFinish_m2487550001 ();
 extern "C" void StageManager__cctor_m2616850515 ();
@@ -11116,7 +11119,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11098] = 
+extern const Il2CppMethodPointer g_MethodPointers[11101] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -21862,6 +21865,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11098] =
 	SceneController_GetStatus_m4010357723,
 	SceneController_SetStatus_m3328661133,
 	SceneController_LoadGame_m2594758407,
+	SceneController_LoadTitle_m433975523,
 	SceneController__cctor_m2985119817,
 	SoundController__ctor_m919190390,
 	SoundController_PlaySound_m4128028087,
@@ -21870,6 +21874,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11098] =
 	StageManager_Start_m2166152772,
 	StageManager_Update_m448967036,
 	StageManager_NextStage_m2693353284,
+	StageManager_GameOver_m4159581688,
+	StageManager_GameClear_m1079211354,
 	StageManager_CheckBlockNum_m2173459418,
 	StageManager_isFinish_m2487550001,
 	StageManager__cctor_m2616850515,
